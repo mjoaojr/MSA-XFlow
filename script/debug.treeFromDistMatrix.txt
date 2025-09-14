@@ -1,0 +1,71 @@
+
+
+			Neighbor-joining Method
+
+ Saitou, N. and Nei, M. (1987) The Neighbor-joining Method:
+ A New Method for Reconstructing Phylogenetic Trees.
+ Mol. Biol. Evol., 4(4), 406-425
+
+
+ This is an UNROOTED tree
+
+ Numbers in parentheses are branch lengths
+
+
+***  cycle 1
+dmin     = 0.301020408
+dio      = 0.578987857
+djo      = 0.587020895
+bi       = 0.146493685
+bj       = 0.154526723
+mini     =         2
+minj     =         3
+av[minj] =         0
+av[minj] =         0
+
+ Cycle   1     =  SEQ:   2 (  0.14649) joins  SEQ:   3 (  0.15453)
+
+***  cycle 2
+dmin     = 0.604026846
+dio      = 0.614630942
+djo      = 0.60317602
+bi       = 0.307740884
+bj       = 0.296285962
+mini     =         5
+minj     =         6
+av[minj] =         0
+av[minj] =         0
+
+ Cycle   2     =  SEQ:   5 (  0.30774) joins  SEQ:   6 (  0.29629)
+
+***  cycle 3
+dmin     = 0.567375887
+dio      = 0.575650118
+djo      = 0.611791366
+bi       = 0.265617319
+bj       = 0.301758567
+mini     =         4
+minj     =         7
+av[minj] =         0
+av[minj] =         0
+
+ Cycle   3     =  SEQ:   4 (  0.26562) joins  SEQ:   7 (  0.30176)
+
+***  cycle 4
+dmin     = 0.612846435
+dio      = 0.584157896
+djo      = 0.604960527
+bi       = 0.0123339588
+bj       = 0.0148111105
+mini     =         4
+minj     =         5
+av[minj] = 0.302013423
+av[minj] = 0.302013423
+
+ Cycle   4     = Node:   4 ( 0.012334) joins Node:   5 ( 0.014811)
+
+ Cycle   5 (Last cycle, trichotomy):
+
+		  SEQ:   1 (  0.28659) joins
+		 Node:   2 (  0.12395) joins
+		 Node:   4 (0.0076127) 

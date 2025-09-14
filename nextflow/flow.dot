@@ -1,0 +1,34 @@
+digraph "flow" {
+p0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+p2 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="combine"];
+p0 -> p2 [label="infiles"];
+
+p1 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.of"];
+p2 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="combine"];
+p1 -> p2 [label="ssmethods"];
+
+p2 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="combine"];
+p3 [label="similarity_scores"];
+p2 -> p3 [label="params"];
+
+p3 [label="similarity_scores"];
+p5 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="combine"];
+p3 -> p5;
+
+p4 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.of"];
+p5 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="combine"];
+p4 -> p5 [label="gtmethods"];
+
+p5 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="combine"];
+p6 [label="guide_tree"];
+p5 -> p6 [label="params2"];
+
+p6 [label="guide_tree"];
+p7 [label="alignment"];
+p6 -> p7;
+
+p7 [label="alignment"];
+p8 [shape=point];
+p7 -> p8;
+
+}

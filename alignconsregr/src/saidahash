@@ -1,0 +1,1620 @@
+debugging is on
+
+
+Logging debug info to file: logfile.txt
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: A0A009GZ05|PF00005_24...62_|ABC                        64 aa
+Sequence 2: A0A011TLB6|PF00005_18...67_|ABC                        71 aa
+Sequence 3: A0A014AW26|PF00005_20...89_|ABC                        95 aa
+Sequence 4: A0A014E9T3|PF00005_5...41_|ABC                         97 aa
+Sequence 5: A0A014EMC0|PF00005_22...64_|ABC                        73 aa
+Sequence 6: A0A015TLV2|PF00005_3...75_|ABC                         75 aa
+Sequence 7: A0A016VZ41|PF00005_9...72_|ABC                         74 aa
+Sequence 8: A0A017HMB2|PF00005_18...71_|ABC                        97 aa
+Sequence 9: A0A022PMD1|PF00005_1...29_|ABC                         80 aa
+Sequence 10: A0A022RY82|PF00005_54...90_|ABC                        96 aa
+Sequence 11: A0A023DF66|PF00005_12...43_|ABC                        72 aa
+Sequence 12: A0A023UGC7|PF00005_20...60_|ABC                        61 aa
+Sequence 13: A0A026W4Z8|PF00005_1...74_|ABC                         86 aa
+Sequence 14: A0A059ASA8|PF00005_75...99_|ABC                        99 aa
+Sequence 15: A0A059E8L2|PF00005_20...53_|ABC                        87 aa
+Sequence 16: A0A059EF70|PF00005_4...80_|ABC                         87 aa
+Sequence 17: A0A059EVF1|PF00005_26...78_|ABC                        87 aa
+Sequence 18: A0A059WJ13|PF00005_11...37_|ABC                        96 aa
+Sequence 19: A0A060NVQ6|PF00005_24...60_|ABC                        93 aa
+Sequence 20: A0A061A179|PF00005_24...73_|ABC                        83 aa
+Sequence 21: A0A061N1J0|PF00005_25...63_|ABC                        71 aa
+Sequence 22: A0A061N682|PF00005_17...64_|ABC                        71 aa
+Sequence 23: A0A061NFC6|PF00005_19...79_|ABC                        81 aa
+Sequence 24: A0A061NFJ2|PF00005_17...75_|ABC                        80 aa
+Sequence 25: A0A061NLI2|PF00005_24...65_|ABC                        66 aa
+Sequence 26: A0A061NMA3|PF00005_18...55_|ABC                        55 aa
+Sequence 27: A0A061NQ42|PF00005_19...51_|ABC                        84 aa
+Sequence 28: A0A061NTZ4|PF00005_12...47_|ABC                        58 aa
+Sequence 29: A0A061NUI1|PF00005_27...66_|ABC                        78 aa
+Sequence 30: A0A061PY76|PF00005_3...45_|ABC                         71 aa
+Sequence 31: A0A061RW33|PF00005_4...34_|ABC                         79 aa
+Sequence 32: A0A062XIA5|PF00005_21...68_|ABC                        68 aa
+Sequence 33: A0A063YTV5|PF00005_41...80_|ABC                        84 aa
+Sequence 34: A0A066UB93|PF00005_25...73_|ABC                        82 aa
+Sequence 35: A0A067BKJ4|PF00005_52...83_|ABC                        83 aa
+Sequence 36: A0A068NG33|PF00005_24...92_|ABC                        98 aa
+Sequence 37: A0A068QU10|PF00005_18...61_|ABC                        66 aa
+Sequence 38: A0A069AVG1|PF00005_28...71_|ABC                        87 aa
+Sequence 39: A0A071MJY7|PF00005_18...83_|ABC                        83 aa
+Sequence 40: A0A071MWN4|PF00005_18...83_|ABC                        83 aa
+Sequence 41: A0A072NHN2|PF00005_26...64_|ABC                        89 aa
+Sequence 42: A0A072NL26|PF00005_20...59_|ABC                        70 aa
+Sequence 43: A0A072UMU6|PF00005_9...36_|ABC                         97 aa
+Sequence 44: A0A072Y5V7|PF00005_22...81_|ABC                        91 aa
+Sequence 45: A0A074TJB5|PF00005_27...60_|ABC                        64 aa
+Sequence 46: A0A074TJL5|PF00005_11...58_|ABC                        75 aa
+Sequence 47: A0A074TJN8|PF00005_31...56_|ABC                        56 aa
+Sequence 48: A0A074TNY4|PF00005_21...74_|ABC                        82 aa
+Sequence 49: A0A074TPY2|PF00005_21...50_|ABC                        51 aa
+Sequence 50: A0A074TQE2|PF00005_20...68_|ABC                        76 aa
+Sequence 51: A0A074TSB3|PF00005_13...62_|ABC                        63 aa
+Sequence 52: A0A074TTW5|PF00005_37...77_|ABC                        77 aa
+Sequence 53: A0A074TU53|PF00005_8...44_|ABC                         81 aa
+Sequence 54: A0A074TUL3|PF00005_21...85_|ABC                        88 aa
+Sequence 55: A0A074UE57|PF00005_2...32_|ABC                         84 aa
+Sequence 56: A0A074UGK2|PF00005_21...61_|ABC                        63 aa
+Sequence 57: A0A074UGY5|PF00005_5...61_|ABC                         70 aa
+Sequence 58: A0A074YXZ5|PF00005_6...73_|ABC                         74 aa
+Sequence 59: A0A075FX57|PF00005_20...75_|ABC                        79 aa
+Sequence 60: A0A075H410|PF00005_20...71_|ABC                        79 aa
+Sequence 61: A0A075H6U0|PF00005_12...61_|ABC                        84 aa
+Sequence 62: A0A075HZG8|PF00005_3...52_|ABC                         74 aa
+Sequence 63: A0A075I1Q3|PF00005_20...81_|ABC                        96 aa
+Sequence 64: A0A075I2G7|PF00005_20...49_|ABC                        52 aa
+Sequence 65: A0A075I4S3|PF00005_20...78_|ABC                        79 aa
+Sequence 66: A0A076HX31|PF00005_1...51_|ABC                         54 aa
+Sequence 67: A0A077F8E2|PF00005_5...45_|ABC                         69 aa
+Sequence 68: A0A077M8A1|PF00005_53...95_|ABC                        96 aa
+Sequence 69: A0A077P4H7|PF00005_24...51_|ABC                        59 aa
+Sequence 70: A0A077ZQD9|PF00005_4...36_|ABC                         90 aa
+Sequence 71: A0A078I3L8|PF00005_2...62_|ABC                         74 aa
+Sequence 72: A0A078ID67|PF00005_26...61_|ABC                        74 aa
+Sequence 73: A0A078KKZ3|PF00005_25...95_|ABC                        96 aa
+Sequence 74: A0A078N137|PF00005_18...76_|ABC                        88 aa
+Sequence 75: A0A080J5W3|PF00005_17...51_|ABC                        53 aa
+Sequence 76: A0A080K874|PF00005_4...36_|ABC                         98 aa
+Sequence 77: A0A080KBW7|PF00005_15...53_|ABC                        98 aa
+Sequence 78: A0A080KJV1|PF00005_18...50_|ABC                        52 aa
+Sequence 79: A0A080KLN8|PF00005_17...88_|ABC                        88 aa
+Sequence 80: A0A080ZXQ1|PF00005_37...75_|ABC                        85 aa
+Sequence 81: A0A081AVJ4|PF00005_69...96_|ABC                        96 aa
+Sequence 82: A0A081D3X5|PF00005_17...63_|ABC                        87 aa
+Sequence 83: A0A081D7N6|PF00005_24...47_|ABC                        47 aa
+Sequence 84: A0A081DDZ5|PF00005_2...38_|ABC                         54 aa
+Sequence 85: A0A081QRZ0|PF00005_4...38_|ABC                         68 aa
+Sequence 86: A0A081R4V1|PF00005_12...62_|ABC                        75 aa
+Sequence 87: A0A084VPQ2|PF00005_19...52_|ABC                        53 aa
+Sequence 88: A0A085B4Y8|PF00005_26...80_|ABC                        83 aa
+Sequence 89: A0A085DHI4|PF00005_37...84_|ABC                        87 aa
+Sequence 90: A0A085DQW6|PF00005_7...81_|ABC                         94 aa
+Sequence 91: A0A085DRM9|PF00005_45...89_|ABC                        97 aa
+Sequence 92: A0A085DRP2|PF00005_21...77_|ABC                        88 aa
+Sequence 93: A0A085DSI6|PF00005_60...87_|ABC                        89 aa
+Sequence 94: A0A085LCR2|PF00005_23...66_|ABC                        93 aa
+Sequence 95: A0A086D8C6|PF00005_37...61_|ABC                        61 aa
+Sequence 96: A0A086DUI2|PF00005_18...66_|ABC                        86 aa
+Sequence 97: A0A086H0U7|PF00005_21...87_|ABC                        89 aa
+Sequence 98: A0A086MKE1|PF00005_20...47_|ABC                        91 aa
+Sequence 99: A0A086Q946|PF00005_15...71_|ABC                        95 aa
+Sequence 100: A0A086XT19|PF00005_22...69_|ABC                        75 aa
+Sequence 101: A0A086Z139|PF00005_1...28_|ABC                         82 aa
+Sequence 102: A0A087AFL4|PF00005_60...91_|ABC                        93 aa
+Sequence 103: A0A087AVY3|PF00005_22...64_|ABC                        71 aa
+Sequence 104: A0A087BTB5|PF00005_5...44_|ABC                         87 aa
+Sequence 105: A0A087FFU8|PF00005_27...66_|ABC                        67 aa
+Sequence 106: A0A087RUT8|PF00005_20...68_|ABC                        68 aa
+Sequence 107: A0A087T5D8|PF00005_64...98_|ABC                        98 aa
+Sequence 108: A0A087V2L5|PF00005_27...66_|ABC                        81 aa
+Sequence 109: A0A088T1A1|PF00005_1...52_|ABC                         52 aa
+Sequence 110: A0A089MCP2|PF00005_18...67_|ABC                        91 aa
+Sequence 111: A0A090IVH6|PF00005_19...51_|ABC                        52 aa
+Sequence 112: A0A090NET5|PF00005_4...36_|ABC                         91 aa
+Sequence 113: A0A090NFH6|PF00005_29...70_|Ribose/galactose/methyl    71 aa
+Sequence 114: A0A090NGQ1|PF00005_17...50_|ABC                        53 aa
+Sequence 115: A0A090P1R0|PF00005_2...58_|ABC                         76 aa
+Sequence 116: A0A090PEZ9|PF00005_20...87_|ABC                        92 aa
+Sequence 117: A0A090PG17|PF00005_21...61_|ABC                        64 aa
+Sequence 118: A0A090PR46|PF00005_18...54_|ABC                        78 aa
+Sequence 119: A0A090PRX9|PF00005_2...32_|ABC                         96 aa
+Sequence 120: A0A090PUS5|PF00005_18...73_|ABC                        94 aa
+Sequence 121: A0A090Q1G0|PF00005_21...76_|ABC                        89 aa
+Sequence 122: A0A090QC96|PF00005_20...68_|ABC                        80 aa
+Sequence 123: A0A090QMV6|PF00005_31...62_|ABC                        68 aa
+Sequence 124: A0A090QT41|PF00005_20...68_|ABC                        85 aa
+Sequence 125: A0A090QVG4|PF00005_54...91_|ABC                        96 aa
+Sequence 126: A0A090QWK9|PF00005_4...45_|ABC                         61 aa
+Sequence 127: A0A090QZN7|PF00005_2...77_|ABC                         83 aa
+Sequence 128: A0A090R975|PF00005_38...69_|ABC                        84 aa
+Sequence 129: A0A090RA18|PF00005_3...54_|ABC                         67 aa
+Sequence 130: A0A090RDZ5|PF00005_17...48_|ABC                        49 aa
+Sequence 131: A0A090RFF2|PF00005_6...36_|ABC                         42 aa
+Sequence 132: A0A090RG98|PF00005_25...73_|ABC                        75 aa
+Sequence 133: A0A090RHF8|PF00005_11...51_|ABC                        77 aa
+Sequence 134: A0A090RKU8|PF00005_25...50_|ABC                        50 aa
+Sequence 135: A0A090RR91|PF00005_19...52_|ABC                        65 aa
+Sequence 136: A0A090RUR8|PF00005_20...83_|ABC                        89 aa
+Sequence 137: A0A090RYQ8|PF00005_24...58_|ABC                        78 aa
+Sequence 138: A0A090RZU6|PF00005_24...58_|ABC                        77 aa
+Sequence 139: A0A090RZU8|PF00005_1...41_|ABC                         45 aa
+Sequence 140: A0A090S1F2|PF00005_22...53_|ABC                        68 aa
+Sequence 141: A0A090S8W2|PF00005_20...45_|ABC                        45 aa
+Sequence 142: A0A090SAE9|PF00005_3...33_|ABC                         53 aa
+Sequence 143: A0A090SAX8|PF00005_22...73_|ABC                        82 aa
+Sequence 144: A0A090SD98|PF00005_28...64_|ABC                        74 aa
+Sequence 145: A0A090SDU2|PF00005_32...66_|ABC                        75 aa
+Sequence 146: A0A090SH98|PF00005_21...87_|ABC                        90 aa
+Sequence 147: A0A090SIL7|PF00005_22...72_|ABC                        82 aa
+Sequence 148: A0A090SJ33|PF00005_34...61_|ABC                        61 aa
+Sequence 149: A0A090SNR5|PF00005_1...31_|ABC                         39 aa
+Sequence 150: A0A090SQS9|PF00005_2...31_|ABC                         39 aa
+Sequence 151: A0A090SRH2|PF00005_21...90_|ABC                        97 aa
+Sequence 152: A0A090SSM9|PF00005_24...70_|ABC                        87 aa
+Sequence 153: A0A090SX88|PF00005_20...54_|ABC                        58 aa
+Sequence 154: A0A090SYP5|PF00005_32...69_|ABC                        90 aa
+Sequence 155: A0A090T1H6|PF00005_3...62_|ABC                         65 aa
+Sequence 156: A0A090T270|PF00005_49...83_|ABC                        85 aa
+Sequence 157: A0A090T6W6|PF00005_21...72_|ABC                        81 aa
+Sequence 158: A0A090T7G5|PF00005_37...79_|ABC                        84 aa
+Sequence 159: A0A090TEL0|PF00005_6...36_|ABC                         58 aa
+Sequence 160: A0A090TG83|PF00005_7...44_|ABC                         55 aa
+Sequence 161: A0A090TW95|PF00005_21...82_|ABC                        90 aa
+Sequence 162: A0A090VGG7|PF00005_18...65_|ABC                        68 aa
+Sequence 163: A0A090WZA7|PF00005_20...60_|ABC                        74 aa
+Sequence 164: A0A090X6I7|PF00005_18...83_|ABC                        89 aa
+Sequence 165: A0A090YT58|PF00005_22...67_|ABC                        70 aa
+Sequence 166: A0A091BRK1|PF00005_17...89_|ABC                        96 aa
+Sequence 167: A0A091BVX7|PF00005_3...36_|ABC                         84 aa
+Sequence 168: A0A091BWR6|PF00005_3...36_|ABC                         84 aa
+Sequence 169: A0A091BZ73|PF00005_17...75_|ABC                        88 aa
+Sequence 170: A0A091C197|PF00005_24...80_|ABC                        94 aa
+Sequence 171: A0A091C367|PF00005_24...75_|ABC                        96 aa
+Sequence 172: A0A091C9Z5|PF00005_20...70_|ABC                        90 aa
+Sequence 173: A0A091CA88|PF00005_19...70_|ABC                        74 aa
+Sequence 174: A0A091CCG1|PF00005_19...80_|ABC                        82 aa
+Sequence 175: A0A091KIM2|PF00005_27...66_|ABC                        81 aa
+Sequence 176: A0A091MM84|PF00005_27...65_|ABC                        81 aa
+Sequence 177: A0A091TLG0|PF00005_27...66_|ABC                        81 aa
+Sequence 178: A0A093IER1|PF00005_15...47_|ABC                        68 aa
+Sequence 179: A0A094JJ51|PF00005_18...54_|ABC                        60 aa
+Sequence 180: A0A095YLS7|PF00005_41...87_|ABC                        98 aa
+Sequence 181: A0A096B316|PF00005_21...55_|ABC                        61 aa
+Sequence 182: A0A096BAQ6|PF00005_21...53_|ABC                        54 aa
+Sequence 183: A0A096KRR3|PF00005_22...63_|ABC                        66 aa
+Sequence 184: A0A097AQA7|PF00005_19...66_|ABC                        79 aa
+Sequence 185: A0A098ANU0|PF00005_19...81_|ABC                        93 aa
+Sequence 186: A0A098AW85|PF00005_23...66_|ABC                        67 aa
+Sequence 187: A0A098AXM0|PF00005_2...45_|ABC                         98 aa
+Sequence 188: A0A098B300|PF00005_9...47_|ABC                         97 aa
+Sequence 189: A0A098L5Z0|PF00005_23...58_|ABC                        70 aa
+Sequence 190: A0A098RKE9|PF00005_20...89_|ABC                        90 aa
+Sequence 191: A0A098U4U6|PF00005_37...88_|ABC                        92 aa
+Sequence 192: A0A098U4X3|PF00005_27...51_|ABC                        51 aa
+Sequence 193: A0A098Y093|PF00005_14...86_|ABC                        86 aa
+Sequence 194: A0A0A0BK09|PF00005_1...26_|ABC                         79 aa
+Sequence 195: A0A0A0CWD2|PF00005_22...65_|ABC                        73 aa
+Sequence 196: A0A0A0CWH3|PF00005_39...83_|ABC                        84 aa
+Sequence 197: A0A0A0CXE7|PF00005_26...76_|ABC                        83 aa
+Sequence 198: A0A0A0CYC8|PF00005_25...62_|ABC                        63 aa
+Sequence 199: A0A0A0CYZ9|PF00005_3...41_|ABC                         93 aa
+Sequence 200: A0A0A0D9D1|PF00005_28...72_|ABC                        91 aa
+Sequence 201: A0A0A0DC49|PF00005_25...70_|ABC                        71 aa
+Sequence 202: A0A0A0M1G2|PF00005_18...91_|ABC                        94 aa
+Sequence 203: A0A0A0M243|PF00005_19...58_|ABC                        80 aa
+Sequence 204: A0A0A0M259|PF00005_28...73_|ABC                        74 aa
+Sequence 205: A0A0A0M2M7|PF00005_23...57_|ABC                        72 aa
+Sequence 206: A0A0A0M3V8|PF00005_5...46_|ABC                         56 aa
+Sequence 207: A0A0A0M580|PF00005_6...38_|ABC                         65 aa
+Sequence 208: A0A0A0N6M8|PF00005_18...57_|ABC                        58 aa
+Sequence 209: A0A0A1GSF1|PF00005_21...53_|ABC                        54 aa
+Sequence 210: A0A0A2TMV1|PF00005_22...71_|ABC                        81 aa
+Sequence 211: A0A0A2XR06|PF00005_18...50_|ABC                        59 aa
+Sequence 212: A0A0A2YAT2|PF00005_18...51_|ABC                        59 aa
+Sequence 213: A0A0A2ZBU6|PF00005_18...50_|ABC                        59 aa
+Sequence 214: A0A0A3A0X4|PF00005_17...51_|ABC                        59 aa
+Sequence 215: A0A0A3AY52|PF00005_17...50_|ABC                        59 aa
+Sequence 216: A0A0A3HQQ6|PF00005_9...43_|ABC                         84 aa
+Sequence 217: A0A0A3HUN1|PF00005_6...36_|ABC                         92 aa
+Sequence 218: A0A0A6CTL6|PF00005_19...63_|ABC                        67 aa
+Sequence 219: A0A0A6ZUT8|PF00005_29...70_|Ribose/galactose/methyl    71 aa
+Sequence 220: A0A0A6ZYW5|PF00005_4...36_|ABC                         91 aa
+Sequence 221: A0A0A7A220|PF00005_41...77_|ABC                        83 aa
+Sequence 222: A0A0A7DRY2|PF00005_5...84_|ABC                         84 aa
+Sequence 223: A0A0A7GHA3|PF00005_23...62_|ABC                        76 aa
+Sequence 224: A0A0A7ICU5|PF00005_26...57_|ABC                        84 aa
+Sequence 225: A0A0A7MGQ3|PF00005_15...53_|ABC                        58 aa
+Sequence 226: A0A0A8F4T1|PF00005_14...51_|ABC                        93 aa
+Sequence 227: A0A0A9IN41|PF00005_2...36_|ABC                         70 aa
+Sequence 228: A0A0A9JI68|PF00005_1...28_|ABC                         58 aa
+Sequence 229: A0A0A9LGJ7|PF00005_2...29_|ABC                         87 aa
+Sequence 230: A0A0A9N0E5|PF00005_5...41_|ABC                         99 aa
+Sequence 231: A0A0A9PML1|PF00005_4...46_|ABC                         80 aa
+Sequence 232: A0A0A9SKH9|PF00005_22...67_|ABC                        90 aa
+Sequence 233: A0A0A9WPV2|PF00005_3...89_|ABC                         99 aa
+Sequence 234: A0A0B0D7Y6|PF00005_53...92_|ABC                        92 aa
+Sequence 235: A0A0B0ENB7|PF00005_31...84_|ABC                        87 aa
+Sequence 236: A0A0B0HJH7|PF00005_1...69_|ABC                         71 aa
+Sequence 237: A0A0B0HKD1|PF00005_19...50_|ABC                        50 aa
+Sequence 238: A0A0B0HLX2|PF00005_22...65_|ABC                        69 aa
+Sequence 239: A0A0B0HMI5|PF00005_4...36_|ABC                         92 aa
+Sequence 240: A0A0B0HQL3|PF00005_2...45_|ABC                         94 aa
+Sequence 241: A0A0B0HQP5|PF00005_17...57_|ABC                        64 aa
+Sequence 242: A0A0B0I2R2|PF00005_28...59_|ABC                        60 aa
+Sequence 243: A0A0B0I535|PF00005_23...75_|ABC                        94 aa
+Sequence 244: A0A0B0IEX1|PF00005_21...86_|ABC                        98 aa
+Sequence 245: A0A0B0PFK5|PF00005_6...39_|ABC                         67 aa
+Sequence 246: A0A0B1QYC8|PF00005_17...83_|ABC                        83 aa
+Sequence 247: A0A0B1RVF8|PF00005_19...91_|ABC                        98 aa
+Sequence 248: A0A0B1S072|PF00005_11...48_|ABC                        72 aa
+Sequence 249: A0A0B1S873|PF00005_14...60_|ABC                        76 aa
+Sequence 250: A0A0B1S9X6|PF00005_2...30_|ABC                         98 aa
+Sequence 251: A0A0B1SHK6|PF00005_2...90_|ABC                         93 aa
+Sequence 252: A0A0B1TAQ6|PF00005_26...61_|ABC                        82 aa
+Sequence 253: A0A0B1TI09|PF00005_2...35_|ABC                         96 aa
+Sequence 254: A0A0B1YLC3|PF00005_18...93_|ABC                        94 aa
+Sequence 255: A0A0B2S4N5|PF00005_25...58_|ABC                        61 aa
+Sequence 256: A0A0B2XL24|PF00005_23...65_|Daunorubicin               70 aa
+Sequence 257: A0A0B2XMA8|PF00005_3...39_|ABC                         48 aa
+Sequence 258: A0A0B3B921|PF00005_21...49_|ABC                        49 aa
+Sequence 259: A0A0B4E200|PF00005_35...68_|ABC                        69 aa
+Sequence 260: A0A0B4ENI5|PF00005_21...85_|ABC                        92 aa
+Sequence 261: A0A0B4ETT4|PF00005_18...73_|ABC                        80 aa
+Sequence 262: A0A0B4EWT5|PF00005_20...73_|ABC                        76 aa
+Sequence 263: A0A0B5AR87|PF00005_23...64_|ABC                        66 aa
+Sequence 264: A0A0B5QR19|PF00005_15...65_|ABC                        84 aa
+Sequence 265: A0A0B6D010|PF00005_12...69_|ABC                        87 aa
+Sequence 266: A0A0B6XUF9|PF00005_3...37_|ABC                         71 aa
+Sequence 267: A0A0B6YVG3|PF00005_2...38_|ABC                         94 aa
+Sequence 268: A0A0B6YX77|PF00005_19...57_|ABC                        79 aa
+Sequence 269: A0A0B6Z2I7|PF00005_15...73_|ABC                        84 aa
+Sequence 270: A0A0B6ZH86|PF00005_16...56_|ABC                        69 aa
+Sequence 271: A0A0B7BYB4|PF00005_39...71_|ABC                        75 aa
+Sequence 272: A0A0B7GQ97|PF00005_21...71_|ABC                        86 aa
+Sequence 273: A0A0B7H0Y8|PF00005_21...82_|ABC                        98 aa
+Sequence 274: A0A0B7HIJ9|PF00005_18...45_|ABC                        51 aa
+Sequence 275: A0A0B7MEQ2|PF00005_10...60_|ABC                        64 aa
+Sequence 276: A0A0B7MJW3|PF00005_4...42_|ABC                         62 aa
+Sequence 277: A0A0B7MLQ1|PF00005_27...70_|ABC                        80 aa
+Sequence 278: A0A0B7MLV8|PF00005_16...68_|ABC                        99 aa
+Sequence 279: A0A0B7MPF5|PF00005_18...85_|ABC                        91 aa
+Sequence 280: A0A0B7N138|PF00005_10...61_|ABC                        66 aa
+Sequence 281: A0A0B8NT25|PF00005_25...57_|ABC                        63 aa
+Sequence 282: A0A0B8NTG9|PF00005_20...52_|ABC                        61 aa
+Sequence 283: A0A0B8P0S2|PF00005_23...75_|ABC                        89 aa
+Sequence 284: A0A0B8P1S6|PF00005_4...89_|ABC                         97 aa
+Sequence 285: A0A0B8P3X8|PF00005_1...65_|ABC                         72 aa
+Sequence 286: A0A0B8P9M0|PF00005_27...88_|ABC                        91 aa
+Sequence 287: A0A0B8PAI9|PF00005_2...54_|ABC                         60 aa
+Sequence 288: A0A0B8PNB7|PF00005_26...60_|ABC                        78 aa
+Sequence 289: A0A0B8PPI6|PF00005_23...75_|ABC                        89 aa
+Sequence 290: A0A0B8PWY8|PF00005_20...47_|ABC                        48 aa
+Sequence 291: A0A0B8PWZ7|PF00005_6...41_|ABC                         65 aa
+Sequence 292: A0A0B8PYS5|PF00005_20...71_|ABC                        89 aa
+Sequence 293: A0A0B8Q1Q3|PF00005_4...37_|ABC                         79 aa
+Sequence 294: A0A0B8Q6A0|PF00005_48...74_|ABC                        77 aa
+Sequence 295: A0A0B8QDV6|PF00005_25...57_|ABC                        63 aa
+Sequence 296: A0A0B8QIY0|PF00005_23...85_|ABC                        99 aa
+Sequence 297: A0A0B8QMC6|PF00005_19...89_|ABC                        99 aa
+Sequence 298: A0A0B8QNZ1|PF00005_36...77_|ABC                        81 aa
+Sequence 299: A0A0B8QPB8|PF00005_2...48_|ABC                         94 aa
+Sequence 300: A0A0B8QR79|PF00005_7...41_|ABC                         96 aa
+Sequence 301: A0A0C1JWN6|PF00005_18...57_|ABC                        57 aa
+Sequence 302: A0A0C1N8I5|PF00005_22...90_|ABC                        91 aa
+Sequence 303: A0A0C1UCV1|PF00005_19...62_|ABC                        68 aa
+Sequence 304: A0A0C2BMI7|PF00005_3...58_|ABC                         67 aa
+Sequence 305: A0A0C2C0U3|PF00005_1...86_|ABC                         96 aa
+Sequence 306: A0A0C2DGA3|PF00005_3...38_|ABC                         89 aa
+Sequence 307: A0A0C2F7U2|PF00005_7...84_|ABC                         86 aa
+Sequence 308: A0A0C2FEC0|PF00005_2...90_|ABC                         96 aa
+Sequence 309: A0A0C2FVS4|PF00005_39...95_|ABC                        99 aa
+Sequence 310: A0A0C2G2D8|PF00005_8...44_|ABC                         65 aa
+Sequence 311: A0A0C2GHK4|PF00005_58...93_|ABC                        93 aa
+Sequence 312: A0A0C2H7S7|PF00005_50...79_|ABC                        87 aa
+Sequence 313: A0A0C2KW31|PF00005_40...72_|ABC                        74 aa
+Sequence 314: A0A0C2VLN1|PF00005_18...61_|ABC                        61 aa
+Sequence 315: A0A0C2W0D4|PF00005_19...40_|ABC                        40 aa
+Sequence 316: A0A0C2Z829|PF00005_28...77_|ABC                        85 aa
+Sequence 317: A0A0C2Z8J8|PF00005_22...66_|ABC                        67 aa
+Sequence 318: A0A0C3AFX8|PF00005_29...72_|ABC                        77 aa
+Sequence 319: A0A0C3RA39|PF00005_27...66_|ABC                        66 aa
+Sequence 320: A0A0C5CDW8|PF00005_2...48_|ABC                         92 aa
+Sequence 321: A0A0C5X7Q7|PF00005_8...88_|ABC                         89 aa
+Sequence 322: A0A0C6WKU1|PF00005_2...78_|ABC                         78 aa
+Sequence 323: A0A0C9PG39|PF00005_49...75_|ABC                        80 aa
+Sequence 324: A0A0D0LAF6|PF00005_2...75_|ABC                         75 aa
+Sequence 325: A0A0D0SEP1|PF00005_18...58_|ABC                        58 aa
+Sequence 326: A0A0D0SJK8|PF00005_20...61_|ABC                        62 aa
+Sequence 327: A0A0D1GN40|PF00005_1...25_|ABC                         79 aa
+Sequence 328: A0A0D1M327|PF00005_18...52_|ABC                        56 aa
+Sequence 329: A0A0D1RHH5|PF00005_23...85_|ABC                        93 aa
+Sequence 330: A0A0D2AKU1|PF00005_50...86_|ABC                        88 aa
+Sequence 331: A0A0D2K557|PF00005_7...43_|ABC                         71 aa
+Sequence 332: A0A0D2RHZ3|PF00005_11...69_|ABC                        72 aa
+Sequence 333: A0A0D3AGM3|PF00005_5...80_|ABC                         86 aa
+Sequence 334: A0A0D5M0N8|PF00005_25...70_|ABC                        73 aa
+Sequence 335: A0A0D6L3R3|PF00005_3...46_|ABC                         81 aa
+Sequence 336: A0A0D6LK14|PF00005_22...59_|ABC                        96 aa
+Sequence 337: A0A0D6N046|PF00005_35...84_|ABC                        92 aa
+Sequence 338: A0A0D6WTR1|PF00005_19...66_|ABC                        67 aa
+Sequence 339: A0A0D7KTN6|PF00005_40...90_|ABC                        99 aa
+Sequence 340: A0A0D8L1R2|PF00005_22...62_|ABC                        62 aa
+Sequence 341: A0A0D8L2Y3|PF00005_20...89_|ABC                        90 aa
+Sequence 342: A0A0D8L3M6|PF00005_22...62_|ABC                        67 aa
+Sequence 343: A0A0D8L8T2|PF00005_31...71_|ABC                        72 aa
+Sequence 344: A0A0D8L925|PF00005_17...52_|ABC                        55 aa
+Sequence 345: A0A0D8LAR1|PF00005_24...73_|ABC                        76 aa
+Sequence 346: A0A0D8NRL5|PF00005_19...74_|ABC                        79 aa
+Sequence 347: A0A0D8PDF7|PF00005_5...35_|ABC                         75 aa
+Sequence 348: A0A0D8QUU1|PF00005_23...80_|ABC                        89 aa
+Sequence 349: A0A0D8SLE1|PF00005_21...68_|ABC                        79 aa
+Sequence 350: A0A0D8TWX8|PF00005_21...56_|ABC                        80 aa
+Sequence 351: A0A0D8X7H5|PF00005_22...72_|ABC                        92 aa
+Sequence 352: A0A0D8X7L5|PF00005_18...43_|ABC                        76 aa
+Sequence 353: A0A0D8X8F1|PF00005_2...55_|ABC                         95 aa
+Sequence 354: A0A0D8XBZ6|PF00005_11...55_|ABC                        91 aa
+Sequence 355: A0A0E1C6R4|PF00005_29...82_|ABC                        86 aa
+Sequence 356: A0A0E1KYK6|PF00005_11...70_|ABC                        97 aa
+Sequence 357: A0A0E1MVD0|PF00005_2...81_|ABC                         84 aa
+Sequence 358: A0A0E1X8N7|PF00005_26...67_|ABC                        73 aa
+Sequence 359: A0A0E1Y3B9|PF00005_24...56_|ABC                        58 aa
+Sequence 360: A0A0E1Y625|PF00005_18...63_|ABC                        65 aa
+Sequence 361: A0A0E1Y6Q9|PF00005_44...69_|ABC                        69 aa
+Sequence 362: A0A0E1Y9H7|PF00005_1...26_|ABC                         83 aa
+Sequence 363: A0A0E1YG25|PF00005_22...93_|ABC                        94 aa
+Sequence 364: A0A0E1YHE1|PF00005_1...43_|ABC                         49 aa
+Sequence 365: A0A0E2H9K7|PF00005_38...77_|ABC                        89 aa
+Sequence 366: A0A0E2IV92|PF00005_2...50_|ABC                         94 aa
+Sequence 367: A0A0E2P4P1|PF00005_5...36_|ABC                         85 aa
+Sequence 368: A0A0E2PJD9|PF00005_20...60_|ABC                        98 aa
+Sequence 369: A0A0E2Q0M9|PF00005_21...67_|ABC                        90 aa
+Sequence 370: A0A0E2Q2Q9|PF00005_12...41_|ABC                        93 aa
+Sequence 371: A0A0E2QK41|PF00005_26...61_|ABC                        65 aa
+Sequence 372: A0A0E2RGJ1|PF00005_26...61_|ABC                        65 aa
+Sequence 373: A0A0E2RUL3|PF00005_21...67_|ABC                        90 aa
+Sequence 374: A0A0E2RUS3|PF00005_2...71_|ABC                         84 aa
+Sequence 375: A0A0E3KXY6|PF00005_13...51_|ABC                        94 aa
+Sequence 376: A0A0E3L7Y4|PF00005_3...71_|ABC                         87 aa
+Sequence 377: A0A0E3NID9|PF00005_13...51_|ABC                        94 aa
+Sequence 378: A0A0E3NNC8|PF00005_20...51_|ABC                        71 aa
+Sequence 379: A0A0E3NT03|PF00005_20...51_|ABC                        71 aa
+Sequence 380: A0A0E3PBD4|PF00005_3...71_|ABC                         87 aa
+Sequence 381: A0A0E3PSJ9|PF00005_19...57_|ABC                        65 aa
+Sequence 382: A0A0E3QSV1|PF00005_1...62_|ABC                         75 aa
+Sequence 383: A0A0E3QVX6|PF00005_5...42_|ABC                         94 aa
+Sequence 384: A0A0E3RG39|PF00005_38...72_|ABC                        88 aa
+Sequence 385: A0A0E4FW84|PF00005_23...58_|ABC                        67 aa
+Sequence 386: A0A0E4HEA7|PF00005_2...85_|ABC                         95 aa
+Sequence 387: A0A0E8IYD8|PF00005_21...87_|ABC                        87 aa
+Sequence 388: A0A0E9LRA8|PF00005_17...54_|ABC                        85 aa
+Sequence 389: A0A0E9LSS3|PF00005_2...32_|ABC                         97 aa
+Sequence 390: A0A0E9LYV6|PF00005_32...78_|ABC                        82 aa
+Sequence 391: A0A0E9M0X7|PF00005_22...73_|ABC                        88 aa
+Sequence 392: A0A0F0CPK7|PF00005_24...60_|ABC                        62 aa
+Sequence 393: A0A0F0EFM7|PF00005_22...56_|ABC                        57 aa
+Sequence 394: A0A0F0GA81|PF00005_23...72_|ABC                        72 aa
+Sequence 395: A0A0F0GAE4|PF00005_5...79_|ABC                         79 aa
+Sequence 396: A0A0F0GDA3|PF00005_3...47_|ABC                         81 aa
+Sequence 397: A0A0F0HHD4|PF00005_45...76_|ABC                        77 aa
+Sequence 398: A0A0F0HJF6|PF00005_34...65_|ABC                        66 aa
+Sequence 399: A0A0F0L7E8|PF00005_3...54_|ABC                         71 aa
+Sequence 400: A0A0F2CK38|PF00005_17...86_|ABC                        86 aa
+Start of Pairwise alignments
+Aligning...
+
+There are 399 groups
+Start of Multiple Alignment
+
+Aligning...
+cl2: 0.04
+align: 0.00
+
+Group 1: Sequences:   2      Score:753cl2: 0.04
+align: 0.00
+
+Group 2: Sequences:   3      Score:869cl2: 0.04
+align: 0.00
+
+Group 3: Sequences:   2      Score:566cl2: 0.04
+align: 0.00
+
+Group 4: Sequences:   3      Score:922cl2: 0.04
+align: 0.00
+
+Group 5: Sequences:   6      Score:1242cl2: 0.03
+align: 0.00
+
+Group 6: Sequences:   2      Score:758cl2: 0.04
+align: 0.00
+
+Group 7: Sequences:   2      Score:754cl2: 0.04
+align: 0.00
+
+Group 8: Sequences:   4      Score:1023cl2: 0.04
+align: 0.00
+
+Group 9: Sequences:   2      Score:889cl2: 0.04
+align: 0.00
+
+Group 10: Sequences:   6      Score:1139cl2: 0.03
+align: 0.00
+
+Group 11: Sequences:   2      Score:667cl2: 0.04
+align: 0.00
+
+Group 12: Sequences:   3      Score:1111cl2: 0.05
+align: 0.00
+
+Group 13: Sequences:   9      Score:738cl2: 0.05
+align: 0.00
+
+Group 14: Sequences:  15      Score:2820cl2: 0.04
+align: 0.00
+
+Group 15: Sequences:   2      Score:750cl2: 0.04
+align: 0.00
+
+Group 16: Sequences:   3      Score:1068cl2: 0.04
+align: 0.00
+
+Group 17: Sequences:   2      Score:793cl2: 0.04
+align: 0.00
+
+Group 18: Sequences:   3      Score:922cl2: 0.04
+align: 0.00
+
+Group 19: Sequences:   6      Score:1484cl2: 0.04
+align: 0.00
+
+Group 20: Sequences:   2      Score:587cl2: 0.03
+align: 0.00
+
+Group 21: Sequences:   3      Score:682cl2: 0.05
+align: 0.00
+
+Group 22: Sequences:   9      Score:1408cl2: 0.05
+align: 0.00
+
+Group 23: Sequences:  24      Score:640cl2: 0.03
+align: 0.00
+
+Group 24: Sequences:   2      Score:1030cl2: 0.04
+align: 0.00
+
+Group 25: Sequences:   3      Score:1577cl2: 0.04
+align: 0.00
+
+Group 26: Sequences:   4      Score:736cl2: 0.05
+align: 0.00
+
+Group 27: Sequences:   5      Score:632cl2: 0.03
+align: 0.00
+
+Group 28: Sequences:   2      Score:754cl2: 0.04
+align: 0.00
+
+Group 29: Sequences:   3      Score:760cl2: 0.05
+align: 0.00
+
+Group 30: Sequences:   4      Score:1274cl2: 0.04
+align: 0.00
+
+Group 31: Sequences:   2      Score:949cl2: 0.04
+align: 0.00
+
+Group 32: Sequences:   3      Score:1340cl2: 0.06
+align: 0.00
+
+Group 33: Sequences:   7      Score:1439cl2: 0.02
+align: 0.00
+
+Group 34: Sequences:   2      Score:695cl2: 0.05
+align: 0.00
+
+Group 35: Sequences:   3      Score:535cl2: 0.05
+align: 0.00
+
+Group 36: Sequences:   4      Score:731cl2: 0.05
+align: 0.00
+
+Group 37: Sequences:  11      Score:1320cl2: 0.04
+align: 0.00
+
+Group 38: Sequences:   2      Score:1601cl2: 0.05
+align: 0.00
+
+Group 39: Sequences:  13      Score:1636cl2: 0.05
+align: 0.00
+
+Group 40: Sequences:  18      Score:4041cl2: 0.06
+align: 0.00
+
+Group 41: Sequences:  42      Score:1039cl2: 0.04
+align: 0.00
+
+Group 42: Sequences:   2      Score:1375cl2: 0.04
+align: 0.00
+
+Group 43: Sequences:   2      Score:1444cl2: 0.04
+align: 0.00
+
+Group 44: Sequences:   4      Score:1384cl2: 0.04
+align: 0.00
+
+Group 45: Sequences:   5      Score:996cl2: 0.04
+align: 0.00
+
+Group 46: Sequences:   2      Score:1202cl2: 0.05
+align: 0.00
+
+Group 47: Sequences:   3      Score:1372cl2: 0.04
+align: 0.00
+
+Group 48: Sequences:   4      Score:904cl2: 0.05
+align: 0.00
+
+Group 49: Sequences:   9      Score:2225cl2: 0.04
+align: 0.00
+
+Group 50: Sequences:   2      Score:763cl2: 0.04
+align: 0.00
+
+Group 51: Sequences:   3      Score:1170cl2: 0.04
+align: 0.00
+
+Group 52: Sequences:   4      Score:1195cl2: 0.05
+align: 0.00
+
+Group 53: Sequences:   5      Score:2103cl2: 0.03
+align: 0.00
+
+Group 54: Sequences:   2      Score:924cl2: 0.03
+align: 0.00
+
+Group 55: Sequences:   3      Score:1233cl2: 0.03
+align: 0.00
+
+Group 56: Sequences:   2      Score:946cl2: 0.04
+align: 0.00
+
+Group 57: Sequences:   5      Score:1025cl2: 0.04
+align: 0.00
+
+Group 58: Sequences:   6      Score:1155cl2: 0.05
+align: 0.00
+
+Group 59: Sequences:   2      Score:921cl2: 0.04
+align: 0.00
+
+Group 60: Sequences:   3      Score:1083cl2: 0.05
+align: 0.00
+
+Group 61: Sequences:   4      Score:1169cl2: 0.05
+align: 0.00
+
+Group 62: Sequences:   2      Score:1020cl2: 0.05
+align: 0.00
+
+Group 63: Sequences:   6      Score:1143cl2: 0.05
+align: 0.00
+
+Group 64: Sequences:  12      Score:2083cl2: 0.06
+align: 0.00
+
+Group 65: Sequences:  17      Score:4036cl2: 0.04
+align: 0.00
+
+Group 66: Sequences:   2      Score:837cl2: 0.04
+align: 0.00
+
+Group 67: Sequences:   3      Score:1241cl2: 0.05
+align: 0.00
+
+Group 68: Sequences:   4      Score:1210cl2: 0.04
+align: 0.00
+
+Group 69: Sequences:   5      Score:926cl2: 0.05
+align: 0.00
+
+Group 70: Sequences:  22      Score:2478cl2: 0.06
+align: 0.00
+
+Group 71: Sequences:  31      Score:7384cl2: 0.03
+align: 0.00
+
+Group 72: Sequences:   2      Score:871cl2: 0.04
+align: 0.00
+
+Group 73: Sequences:   3      Score:1123cl2: 0.04
+align: 0.00
+
+Group 74: Sequences:   4      Score:1275cl2: 0.05
+align: 0.00
+
+Group 75: Sequences:   5      Score:1218cl2: 0.05
+align: 0.00
+
+Group 76: Sequences:   6      Score:1412cl2: 0.05
+align: 0.00
+
+Group 77: Sequences:   2      Score:981cl2: 0.05
+align: 0.00
+
+Group 78: Sequences:   3      Score:1383cl2: 0.05
+align: 0.00
+
+Group 79: Sequences:   9      Score:1876cl2: 0.04
+align: 0.00
+
+Group 80: Sequences:   2      Score:909cl2: 0.04
+align: 0.00
+
+Group 81: Sequences:   3      Score:1096cl2: 0.05
+align: 0.00
+
+Group 82: Sequences:  12      Score:1648cl2: 0.04
+align: 0.00
+
+Group 83: Sequences:   2      Score:868cl2: 0.04
+align: 0.00
+
+Group 84: Sequences:   3      Score:1312cl2: 0.04
+align: 0.00
+
+Group 85: Sequences:   4      Score:1390cl2: 0.04
+align: 0.00
+
+Group 86: Sequences:   2      Score:1038cl2: 0.05
+align: 0.00
+
+Group 87: Sequences:   3      Score:942cl2: 0.05
+align: 0.00
+
+Group 88: Sequences:   7      Score:1254cl2: 0.05
+align: 0.00
+
+Group 89: Sequences:   2      Score:886cl2: 0.04
+align: 0.00
+
+Group 90: Sequences:   2      Score:853cl2: 0.05
+align: 0.00
+
+Group 91: Sequences:   4      Score:881cl2: 0.05
+align: 0.00
+
+Group 92: Sequences:   5      Score:921cl2: 0.05
+align: 0.00
+
+Group 93: Sequences:   2      Score:945cl2: 0.04
+align: 0.00
+
+Group 94: Sequences:   3      Score:1229cl2: 0.05
+align: 0.00
+
+Group 95: Sequences:   8      Score:766cl2: 0.06
+align: 0.00
+
+Group 96: Sequences:  15      Score:846cl2: 0.06
+align: 0.00
+
+Group 97: Sequences:  27      Score:4381cl2: 0.07
+align: 0.00
+
+Group 98: Sequences:  58      Score:8238cl2: 0.08
+align: 0.01
+
+Group 99: Sequences: 100      Score:2780cl2: 0.05
+align: 0.00
+
+Group 100: Sequences:   2      Score:848cl2: 0.05
+align: 0.00
+
+Group 101: Sequences:   3      Score:1212cl2: 0.05
+align: 0.00
+
+Group 102: Sequences:   4      Score:1116cl2: 0.05
+align: 0.00
+
+Group 103: Sequences:   5      Score:1180cl2: 0.04
+align: 0.00
+
+Group 104: Sequences:   2      Score:763cl2: 0.04
+align: 0.00
+
+Group 105: Sequences:   3      Score:738cl2: 0.04
+align: 0.00
+
+Group 106: Sequences:   4      Score:701cl2: 0.04
+align: 0.00
+
+Group 107: Sequences:   5      Score:1405cl2: 0.04
+align: 0.00
+
+Group 108: Sequences:   2      Score:735cl2: 0.05
+align: 0.00
+
+Group 109: Sequences:   2      Score:769cl2: 0.05
+align: 0.00
+
+Group 110: Sequences:   3      Score:714cl2: 0.04
+align: 0.00
+
+Group 111: Sequences:   2      Score:610cl2: 0.04
+align: 0.00
+
+Group 112: Sequences:   2      Score:793cl2: 0.05
+align: 0.00
+
+Group 113: Sequences:   4      Score:966cl2: 0.05
+align: 0.00
+
+Group 114: Sequences:   7      Score:600cl2: 0.05
+align: 0.00
+
+Group 115: Sequences:   9      Score:774cl2: 0.05
+align: 0.00
+
+Group 116: Sequences:  14      Score:733cl2: 0.06
+align: 0.00
+
+Group 117: Sequences:  19      Score:3443cl2: 0.03
+align: 0.00
+
+Group 118: Sequences:   2      Score:804cl2: 0.02
+align: 0.00
+
+Group 119: Sequences:   2      Score:791cl2: 0.05
+align: 0.00
+
+Group 120: Sequences:   3      Score:694cl2: 0.05
+align: 0.00
+
+Group 121: Sequences:   5      Score:1098cl2: 0.04
+align: 0.00
+
+Group 122: Sequences:   2      Score:782cl2: 0.04
+align: 0.00
+
+Group 123: Sequences:   3      Score:1073cl2: 0.05
+align: 0.00
+
+Group 124: Sequences:   8      Score:614cl2: 0.04
+align: 0.00
+
+Group 125: Sequences:   2      Score:816cl2: 0.05
+align: 0.00
+
+Group 126: Sequences:   2      Score:749cl2: 0.04
+align: 0.00
+
+Group 127: Sequences:   4      Score:1201cl2: 0.05
+align: 0.00
+
+Group 128: Sequences:  12      Score:697cl2: 0.05
+align: 0.00
+
+Group 129: Sequences:  13      Score:686cl2: 0.04
+align: 0.00
+
+Group 130: Sequences:   2      Score:773cl2: 0.05
+align: 0.00
+
+Group 131: Sequences:   3      Score:1321cl2: 0.04
+align: 0.00
+
+Group 132: Sequences:   2      Score:746cl2: 0.04
+align: 0.00
+
+Group 133: Sequences:   3      Score:1018cl2: 0.04
+align: 0.00
+
+Group 134: Sequences:   6      Score:1509cl2: 0.05
+align: 0.00
+
+Group 135: Sequences:  19      Score:963cl2: 0.03
+align: 0.00
+
+Group 136: Sequences:   2      Score:767cl2: 0.04
+align: 0.00
+
+Group 137: Sequences:   3      Score:607cl2: 0.04
+align: 0.00
+
+Group 138: Sequences:   4      Score:783cl2: 0.04
+align: 0.00
+
+Group 139: Sequences:   2      Score:713cl2: 0.05
+align: 0.00
+
+Group 140: Sequences:   6      Score:1119cl2: 0.05
+align: 0.00
+
+Group 141: Sequences:  25      Score:739cl2: 0.03
+align: 0.00
+
+Group 142: Sequences:   2      Score:588cl2: 0.04
+align: 0.00
+
+Group 143: Sequences:   3      Score:588cl2: 0.03
+align: 0.00
+
+Group 144: Sequences:   2      Score:548cl2: 0.05
+align: 0.00
+
+Group 145: Sequences:   2      Score:692cl2: 0.04
+align: 0.00
+
+Group 146: Sequences:   4      Score:819cl2: 0.04
+align: 0.00
+
+Group 147: Sequences:   7      Score:1174cl2: 0.04
+align: 0.00
+
+Group 148: Sequences:   8      Score:912cl2: 0.05
+align: 0.00
+
+Group 149: Sequences:  33      Score:564cl2: 0.06
+align: 0.00
+
+Group 150: Sequences:  52      Score:6765cl2: 0.06
+align: 0.01
+
+Group 151: Sequences: 152      Score:2049cl2: 0.04
+align: 0.00
+
+Group 152: Sequences:   2      Score:1008cl2: 0.03
+align: 0.00
+
+Group 153: Sequences:   2      Score:661cl2: 0.05
+align: 0.00
+
+Group 154: Sequences:   4      Score:1133cl2: 0.03
+align: 0.00
+
+Group 155: Sequences:   2      Score:647cl2: 0.03
+align: 0.00
+
+Group 156: Sequences:   3      Score:864cl2: 0.04
+align: 0.00
+
+Group 157: Sequences:   4      Score:1112cl2: 0.03
+align: 0.00
+
+Group 158: Sequences:   2      Score:482cl2: 0.04
+align: 0.00
+
+Group 159: Sequences:   6      Score:958cl2: 0.05
+align: 0.00
+
+Group 160: Sequences:  10      Score:2136cl2: 0.02
+align: 0.00
+
+Group 161: Sequences:   2      Score:767cl2: 0.04
+align: 0.00
+
+Group 162: Sequences:   2      Score:951cl2: 0.04
+align: 0.00
+
+Group 163: Sequences:   2      Score:901cl2: 0.04
+align: 0.00
+
+Group 164: Sequences:   4      Score:1197cl2: 0.05
+align: 0.00
+
+Group 165: Sequences:   6      Score:1717cl2: 0.04
+align: 0.00
+
+Group 166: Sequences:   2      Score:1021cl2: 0.05
+align: 0.00
+
+Group 167: Sequences:   3      Score:879cl2: 0.05
+align: 0.00
+
+Group 168: Sequences:   4      Score:901cl2: 0.04
+align: 0.00
+
+Group 169: Sequences:  10      Score:1156cl2: 0.04
+align: 0.00
+
+Group 170: Sequences:   2      Score:925cl2: 0.04
+align: 0.00
+
+Group 171: Sequences:   3      Score:1130cl2: 0.04
+align: 0.00
+
+Group 172: Sequences:   2      Score:739cl2: 0.04
+align: 0.00
+
+Group 173: Sequences:   3      Score:663cl2: 0.04
+align: 0.00
+
+Group 174: Sequences:   2      Score:829cl2: 0.04
+align: 0.00
+
+Group 175: Sequences:   5      Score:703cl2: 0.04
+align: 0.00
+
+Group 176: Sequences:   8      Score:1763cl2: 0.05
+align: 0.00
+
+Group 177: Sequences:  18      Score:2515cl2: 0.03
+align: 0.00
+
+Group 178: Sequences:   2      Score:837cl2: 0.04
+align: 0.00
+
+Group 179: Sequences:   3      Score:830cl2: 0.04
+align: 0.00
+
+Group 180: Sequences:   2      Score:905cl2: 0.04
+align: 0.00
+
+Group 181: Sequences:   5      Score:801cl2: 0.05
+align: 0.00
+
+Group 182: Sequences:   6      Score:1217cl2: 0.05
+align: 0.00
+
+Group 183: Sequences:   2      Score:784cl2: 0.02
+align: 0.00
+
+Group 184: Sequences:   2      Score:702cl2: 0.05
+align: 0.00
+
+Group 185: Sequences:   4      Score:840cl2: 0.04
+align: 0.00
+
+Group 186: Sequences:   2      Score:1053cl2: 0.05
+align: 0.00
+
+Group 187: Sequences:   3      Score:1177cl2: 0.05
+align: 0.00
+
+Group 188: Sequences:   7      Score:1503cl2: 0.05
+align: 0.00
+
+Group 189: Sequences:   2      Score:843cl2: 0.05
+align: 0.00
+
+Group 190: Sequences:   3      Score:1040cl2: 0.05
+align: 0.00
+
+Group 191: Sequences:  10      Score:1457cl2: 0.06
+align: 0.00
+
+Group 192: Sequences:  16      Score:2972cl2: 0.05
+align: 0.00
+
+Group 193: Sequences:  34      Score:3772cl2: 0.04
+align: 0.00
+
+Group 194: Sequences:   2      Score:655cl2: 0.02
+align: 0.00
+
+Group 195: Sequences:   3      Score:558cl2: 0.04
+align: 0.00
+
+Group 196: Sequences:   4      Score:965cl2: 0.04
+align: 0.00
+
+Group 197: Sequences:   2      Score:662cl2: 0.04
+align: 0.00
+
+Group 198: Sequences:   6      Score:906cl2: 0.04
+align: 0.00
+
+Group 199: Sequences:   2      Score:676cl2: 0.04
+align: 0.00
+
+Group 200: Sequences:   3      Score:1137cl2: 0.04
+align: 0.00
+
+Group 201: Sequences:   9      Score:1325cl2: 0.03
+align: 0.00
+
+Group 202: Sequences:   2      Score:637cl2: 0.03
+align: 0.00
+
+Group 203: Sequences:   3      Score:580cl2: 0.03
+align: 0.00
+
+Group 204: Sequences:   4      Score:903cl2: 0.04
+align: 0.00
+
+Group 205: Sequences:   5      Score:960cl2: 0.04
+align: 0.00
+
+Group 206: Sequences:  14      Score:1695cl2: 0.05
+align: 0.00
+
+Group 207: Sequences:  48      Score:3638cl2: 0.04
+align: 0.00
+
+Group 208: Sequences:   2      Score:903cl2: 0.05
+align: 0.00
+
+Group 209: Sequences:   3      Score:1276cl2: 0.04
+align: 0.00
+
+Group 210: Sequences:   4      Score:1440cl2: 0.04
+align: 0.00
+
+Group 211: Sequences:   2      Score:1194cl2: 0.05
+align: 0.00
+
+Group 212: Sequences:   6      Score:1280cl2: 0.04
+align: 0.00
+
+Group 213: Sequences:   2      Score:713cl2: 0.04
+align: 0.00
+
+Group 214: Sequences:   3      Score:715cl2: 0.04
+align: 0.00
+
+Group 215: Sequences:   4      Score:677cl2: 0.03
+align: 0.00
+
+Group 216: Sequences:   2      Score:814cl2: 0.03
+align: 0.00
+
+Group 217: Sequences:   3      Score:910cl2: 0.04
+align: 0.00
+
+Group 218: Sequences:   7      Score:1231cl2: 0.05
+align: 0.00
+
+Group 219: Sequences:   2      Score:1014cl2: 0.05
+align: 0.00
+
+Group 220: Sequences:   3      Score:1351cl2: 0.05
+align: 0.00
+
+Group 221: Sequences:  10      Score:1495cl2: 0.05
+align: 0.00
+
+Group 222: Sequences:  11      Score:941cl2: 0.04
+align: 0.00
+
+Group 223: Sequences:   2      Score:1099cl2: 0.05
+align: 0.00
+
+Group 224: Sequences:   3      Score:1382cl2: 0.05
+align: 0.00
+
+Group 225: Sequences:   2      Score:848cl2: 0.05
+align: 0.00
+
+Group 226: Sequences:   5      Score:1227cl2: 0.05
+align: 0.00
+
+Group 227: Sequences:  16      Score:1974cl2: 0.04
+align: 0.00
+
+Group 228: Sequences:   2      Score:892cl2: 0.05
+align: 0.00
+
+Group 229: Sequences:   3      Score:675cl2: 0.03
+align: 0.00
+
+Group 230: Sequences:   2      Score:600cl2: 0.05
+align: 0.00
+
+Group 231: Sequences:   5      Score:747cl2: 0.05
+align: 0.00
+
+Group 232: Sequences:   6      Score:1042cl2: 0.05
+align: 0.00
+
+Group 233: Sequences:  22      Score:1855cl2: 0.05
+align: 0.00
+
+Group 234: Sequences:  28      Score:6650cl2: 0.06
+align: 0.00
+
+Group 235: Sequences:  76      Score:7993cl2: 0.09
+align: 0.00
+
+Group 236: Sequences:  86      Score:20194cl2: 0.03
+align: 0.00
+
+Group 237: Sequences:   2      Score:797cl2: 0.04
+align: 0.00
+
+Group 238: Sequences:   2      Score:956cl2: 0.05
+align: 0.00
+
+Group 239: Sequences:   3      Score:846cl2: 0.04
+align: 0.00
+
+Group 240: Sequences:   5      Score:823cl2: 0.05
+align: 0.00
+
+Group 241: Sequences:   6      Score:954cl2: 0.04
+align: 0.00
+
+Group 242: Sequences:   2      Score:806cl2: 0.03
+align: 0.00
+
+Group 243: Sequences:   2      Score:776cl2: 0.04
+align: 0.00
+
+Group 244: Sequences:   4      Score:675cl2: 0.05
+align: 0.00
+
+Group 245: Sequences:   5      Score:1140cl2: 0.05
+align: 0.00
+
+Group 246: Sequences:  11      Score:1120cl2: 0.05
+align: 0.00
+
+Group 247: Sequences:   2      Score:1182cl2: 0.04
+align: 0.00
+
+Group 248: Sequences:   3      Score:1691cl2: 0.05
+align: 0.00
+
+Group 249: Sequences:  14      Score:1486cl2: 0.05
+align: 0.00
+
+Group 250: Sequences:   2      Score:851cl2: 0.05
+align: 0.00
+
+Group 251: Sequences:   3      Score:858cl2: 0.03
+align: 0.00
+
+Group 252: Sequences:   2      Score:766cl2: 0.05
+align: 0.00
+
+Group 253: Sequences:   3      Score:1008cl2: 0.05
+align: 0.00
+
+Group 254: Sequences:   6      Score:784cl2: 0.04
+align: 0.00
+
+Group 255: Sequences:   2      Score:972cl2: 0.04
+align: 0.00
+
+Group 256: Sequences:   3      Score:891cl2: 0.05
+align: 0.00
+
+Group 257: Sequences:   9      Score:1079cl2: 0.05
+align: 0.00
+
+Group 258: Sequences:  23      Score:2131cl2: 0.04
+align: 0.00
+
+Group 259: Sequences:   2      Score:803cl2: 0.04
+align: 0.00
+
+Group 260: Sequences:   3      Score:855cl2: 0.04
+align: 0.00
+
+Group 261: Sequences:   2      Score:797cl2: 0.04
+align: 0.00
+
+Group 262: Sequences:   5      Score:845cl2: 0.04
+align: 0.00
+
+Group 263: Sequences:   2      Score:848cl2: 0.05
+align: 0.00
+
+Group 264: Sequences:   3      Score:806cl2: 0.05
+align: 0.00
+
+Group 265: Sequences:   4      Score:1044cl2: 0.05
+align: 0.00
+
+Group 266: Sequences:   9      Score:1361cl2: 0.05
+align: 0.00
+
+Group 267: Sequences:  32      Score:1971cl2: 0.02
+align: 0.00
+
+Group 268: Sequences:   2      Score:755cl2: 0.04
+align: 0.00
+
+Group 269: Sequences:   3      Score:439cl2: 0.04
+align: 0.00
+
+Group 270: Sequences:   4      Score:573cl2: 0.04
+align: 0.00
+
+Group 271: Sequences:   2      Score:850cl2: 0.04
+align: 0.00
+
+Group 272: Sequences:   6      Score:603cl2: 0.05
+align: 0.00
+
+Group 273: Sequences:  38      Score:969cl2: 0.03
+align: 0.00
+
+Group 274: Sequences:   2      Score:662cl2: 0.04
+align: 0.00
+
+Group 275: Sequences:   3      Score:721cl2: 0.05
+align: 0.00
+
+Group 276: Sequences:   4      Score:1152cl2: 0.03
+align: 0.00
+
+Group 277: Sequences:   2      Score:710cl2: 0.05
+align: 0.00
+
+Group 278: Sequences:   3      Score:697cl2: 0.05
+align: 0.00
+
+Group 279: Sequences:   7      Score:1013cl2: 0.05
+align: 0.00
+
+Group 280: Sequences:   2      Score:707cl2: 0.05
+align: 0.00
+
+Group 281: Sequences:   3      Score:1240cl2: 0.06
+align: 0.00
+
+Group 282: Sequences:  10      Score:1346cl2: 0.05
+align: 0.00
+
+Group 283: Sequences:   2      Score:1046cl2: 0.05
+align: 0.00
+
+Group 284: Sequences:  12      Score:1314cl2: 0.04
+align: 0.00
+
+Group 285: Sequences:   2      Score:736cl2: 0.03
+align: 0.00
+
+Group 286: Sequences:   2      Score:917cl2: 0.04
+align: 0.00
+
+Group 287: Sequences:   4      Score:894cl2: 0.04
+align: 0.00
+
+Group 288: Sequences:   2      Score:880cl2: 0.04
+align: 0.00
+
+Group 289: Sequences:   6      Score:945cl2: 0.04
+align: 0.00
+
+Group 290: Sequences:   7      Score:1045cl2: 0.05
+align: 0.00
+
+Group 291: Sequences:   8      Score:1172cl2: 0.05
+align: 0.00
+
+Group 292: Sequences:  20      Score:2048cl2: 0.04
+align: 0.00
+
+Group 293: Sequences:   2      Score:877cl2: 0.04
+align: 0.00
+
+Group 294: Sequences:   3      Score:1015cl2: 0.04
+align: 0.00
+
+Group 295: Sequences:   4      Score:779cl2: 0.05
+align: 0.00
+
+Group 296: Sequences:  24      Score:1848cl2: 0.04
+align: 0.00
+
+Group 297: Sequences:   2      Score:842cl2: 0.04
+align: 0.00
+
+Group 298: Sequences:   3      Score:746cl2: 0.04
+align: 0.00
+
+Group 299: Sequences:   4      Score:1100cl2: 0.04
+align: 0.00
+
+Group 300: Sequences:   5      Score:1166cl2: 0.05
+align: 0.00
+
+Group 301: Sequences:  29      Score:1621cl2: 0.06
+align: 0.00
+
+Group 302: Sequences:  67      Score:5959cl2: 0.05
+align: 0.00
+
+Group 303: Sequences:   2      Score:549cl2: 0.04
+align: 0.00
+
+Group 304: Sequences:   2      Score:780cl2: 0.05
+align: 0.00
+
+Group 305: Sequences:   4      Score:623cl2: 0.02
+align: 0.00
+
+Group 306: Sequences:   2      Score:548cl2: 0.03
+align: 0.00
+
+Group 307: Sequences:   3      Score:682cl2: 0.05
+align: 0.00
+
+Group 308: Sequences:   4      Score:548cl2: 0.05
+align: 0.00
+
+Group 309: Sequences:   8      Score:471cl2: 0.04
+align: 0.00
+
+Group 310: Sequences:   2      Score:717cl2: 0.04
+align: 0.00
+
+Group 311: Sequences:   2      Score:673cl2: 0.04
+align: 0.00
+
+Group 312: Sequences:   4      Score:738cl2: 0.05
+align: 0.00
+
+Group 313: Sequences:  12      Score:459cl2: 0.04
+align: 0.00
+
+Group 314: Sequences:   2      Score:834cl2: 0.05
+align: 0.00
+
+Group 315: Sequences:   2      Score:738cl2: 0.04
+align: 0.00
+
+Group 316: Sequences:   4      Score:1101cl2: 0.04
+align: 0.00
+
+Group 317: Sequences:   5      Score:709cl2: 0.02
+align: 0.00
+
+Group 318: Sequences:   2      Score:586cl2: 0.02
+align: 0.00
+
+Group 319: Sequences:   3      Score:445cl2: 0.03
+align: 0.00
+
+Group 320: Sequences:   4      Score:582cl2: 0.03
+align: 0.00
+
+Group 321: Sequences:   5      Score:794cl2: 0.05
+align: 0.00
+
+Group 322: Sequences:  10      Score:587cl2: 0.06
+align: 0.00
+
+Group 323: Sequences:  22      Score:449cl2: 0.06
+align: 0.00
+
+Group 324: Sequences:  89      Score:2421cl2: 0.08
+align: 0.01
+
+Group 325: Sequences: 175      Score:19429cl2: 0.09
+align: 0.02
+
+Group 326: Sequences: 327      Score:6290cl2: 0.05
+align: 0.00
+
+Group 327: Sequences:   2      Score:833cl2: 0.05
+align: 0.00
+
+Group 328: Sequences:   3      Score:1006cl2: 0.04
+align: 0.00
+
+Group 329: Sequences:   2      Score:667cl2: 0.05
+align: 0.00
+
+Group 330: Sequences:   5      Score:1037cl2: 0.04
+align: 0.00
+
+Group 331: Sequences:   2      Score:675cl2: 0.04
+align: 0.00
+
+Group 332: Sequences:   2      Score:722cl2: 0.05
+align: 0.00
+
+Group 333: Sequences:   4      Score:1117cl2: 0.05
+align: 0.00
+
+Group 334: Sequences:   9      Score:1474cl2: 0.03
+align: 0.00
+
+Group 335: Sequences:   2      Score:509cl2: 0.04
+align: 0.00
+
+Group 336: Sequences:   3      Score:481cl2: 0.04
+align: 0.00
+
+Group 337: Sequences:   4      Score:530cl2: 0.04
+align: 0.00
+
+Group 338: Sequences:  13      Score:773cl2: 0.03
+align: 0.00
+
+Group 339: Sequences:   2      Score:622cl2: 0.04
+align: 0.00
+
+Group 340: Sequences:   3      Score:690cl2: 0.04
+align: 0.00
+
+Group 341: Sequences:  16      Score:1751cl2: 0.01
+align: 0.01
+
+Group 342: Sequences: 343      Score:538cl2: 0.04
+align: 0.00
+
+Group 343: Sequences:   2      Score:770cl2: 0.04
+align: 0.00
+
+Group 344: Sequences:   3      Score:707cl2: 0.05
+align: 0.00
+
+Group 345: Sequences:   4      Score:1394cl2: 0.04
+align: 0.00
+
+Group 346: Sequences:   5      Score:1863cl2: 0.04
+align: 0.00
+
+Group 347: Sequences:   6      Score:826cl2: 0.04
+align: 0.00
+
+Group 348: Sequences:   2      Score:879cl2: 0.03
+align: 0.00
+
+Group 349: Sequences:   2      Score:918cl2: 0.04
+align: 0.00
+
+Group 350: Sequences:   4      Score:1293cl2: 0.04
+align: 0.00
+
+Group 351: Sequences:   5      Score:1364cl2: 0.05
+align: 0.00
+
+Group 352: Sequences:  11      Score:1915cl2: 0.04
+align: 0.00
+
+Group 353: Sequences:   2      Score:774cl2: 0.03
+align: 0.00
+
+Group 354: Sequences:   2      Score:459cl2: 0.03
+align: 0.00
+
+Group 355: Sequences:   3      Score:547cl2: 0.04
+align: 0.00
+
+Group 356: Sequences:   5      Score:1344cl2: 0.04
+align: 0.00
+
+Group 357: Sequences:   2      Score:980cl2: 0.04
+align: 0.00
+
+Group 358: Sequences:   3      Score:730cl2: 0.04
+align: 0.00
+
+Group 359: Sequences:   4      Score:1181cl2: 0.04
+align: 0.00
+
+Group 360: Sequences:   5      Score:1290cl2: 0.05
+align: 0.00
+
+Group 361: Sequences:  10      Score:1913cl2: 0.05
+align: 0.00
+
+Group 362: Sequences:  21      Score:2871cl2: 0.04
+align: 0.00
+
+Group 363: Sequences:   2      Score:848cl2: 0.04
+align: 0.00
+
+Group 364: Sequences:   2      Score:896cl2: 0.04
+align: 0.00
+
+Group 365: Sequences:   4      Score:1146cl2: 0.04
+align: 0.00
+
+Group 366: Sequences:   2      Score:754cl2: 0.04
+align: 0.00
+
+Group 367: Sequences:   3      Score:1062cl2: 0.03
+align: 0.00
+
+Group 368: Sequences:   2      Score:784cl2: 0.05
+align: 0.00
+
+Group 369: Sequences:   5      Score:1177cl2: 0.05
+align: 0.00
+
+Group 370: Sequences:   9      Score:1913cl2: 0.04
+align: 0.00
+
+Group 371: Sequences:   2      Score:874cl2: 0.05
+align: 0.00
+
+Group 372: Sequences:   3      Score:1249cl2: 0.04
+align: 0.00
+
+Group 373: Sequences:   2      Score:588cl2: 0.06
+align: 0.00
+
+Group 374: Sequences:   5      Score:1021cl2: 0.05
+align: 0.00
+
+Group 375: Sequences:  14      Score:1865cl2: 0.04
+align: 0.00
+
+Group 376: Sequences:   2      Score:972cl2: 0.05
+align: 0.00
+
+Group 377: Sequences:   3      Score:1321cl2: 0.05
+align: 0.00
+
+Group 378: Sequences:   4      Score:1381cl2: 0.05
+align: 0.00
+
+Group 379: Sequences:  18      Score:2148cl2: 0.04
+align: 0.02
+
+Group 380: Sequences:   2      Score:582cl2: 0.05
+align: 0.00
+
+Group 381: Sequences:  20      Score:1315cl2: 0.04
+align: 0.00
+
+Group 382: Sequences:  21      Score:1324cl2: 0.06
+align: 0.00
+
+Group 383: Sequences:  42      Score:6223cl2: 0.04
+align: 0.00
+
+Group 384: Sequences:   2      Score:1165cl2: 0.05
+align: 0.00
+
+Group 385: Sequences:   3      Score:863cl2: 0.03
+align: 0.00
+
+Group 386: Sequences:   2      Score:1011cl2: 0.03
+align: 0.00
+
+Group 387: Sequences:   2      Score:723cl2: 0.04
+align: 0.00
+
+Group 388: Sequences:   4      Score:1074cl2: 0.05
+align: 0.00
+
+Group 389: Sequences:   7      Score:1801cl2: 0.05
+align: 0.00
+
+Group 390: Sequences:   2      Score:917cl2: 0.06
+align: 0.00
+
+Group 391: Sequences:   3      Score:1284cl2: 0.05
+align: 0.00
+
+Group 392: Sequences:   4      Score:1309cl2: 0.05
+align: 0.00
+
+Group 393: Sequences:   5      Score:1364cl2: 0.05
+align: 0.00
+
+Group 394: Sequences:   6      Score:1125cl2: 0.05
+align: 0.00
+
+Group 395: Sequences:  13      Score:2894cl2: 0.05
+align: 0.00
+
+Group 396: Sequences:  14      Score:545cl2: 0.05
+align: 0.00
+
+Group 397: Sequences:  56      Score:5580cl2: 0.04
+align: 0.00
+
+Group 398: Sequences:  57      Score:625cl2: 0.01
+align: 0.02
+
+Group 399: Sequences: 400      Score:2176
+Alignment Score -11949660
+
+GCG-Alignment file created      [pf00005-split_400-0-100.msf]
+

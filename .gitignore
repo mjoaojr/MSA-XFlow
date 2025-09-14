@@ -1,0 +1,20 @@
+*.o
+*.ss
+*.msf
+*.cl
+*.aln
+*.dnd
+frmw_*
+
+#usados para depuração
+BOX017*
+logfile.txt
+
+*.swp
+
+# Vindos do automake
+*/autom4te.cache/*
+*.Po
+*/.deps/*
+*/.deps/.*
+.dirstamp

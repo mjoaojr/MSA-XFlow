@@ -1,0 +1,1280 @@
+
+
+			Neighbor-joining Method
+
+ Saitou, N. and Nei, M. (1987) The Neighbor-joining Method:
+ A New Method for Reconstructing Phylogenetic Trees.
+ Mol. Biol. Evol., 4(4), 406-425
+
+
+ This is an UNROOTED tree
+
+ Numbers in parentheses are branch lengths
+
+
+***  cycle 1
+dmin     =         0
+dio      = 0.981502099
+djo      = 0.981502099
+bi       =         0
+bj       =         0
+mini     =        39
+minj     =        40
+av[minj] =         0
+av[minj] =         0
+
+ Cycle   1     =  SEQ:  39 (        0) joins  SEQ:  40 (        0)
+
+***  cycle 2
+dmin     = 0.0869565217
+dio      = 0.992071967
+djo      = 0.992401426
+bi       = 0.043313531
+bj       = 0.0436429907
+mini     =        61
+minj     =        62
+av[minj] =         0
+av[minj] =         0
+
+ Cycle   2     =  SEQ:  61 ( 0.043314) joins  SEQ:  62 ( 0.043643)
+
+***  cycle 3
+dmin     = 0.216216216
+dio      = 0.971849899
+djo      = 0.972203278
+bi       = 0.107931419
+bj       = 0.108284797
+mini     =        60
+minj     =        65
+av[minj] =         0
+av[minj] =         0
+
+ Cycle   3     =  SEQ:  60 (  0.10793) joins  SEQ:  65 (  0.10828)
+
+***  cycle 4
+dmin     = 0.452702703
+dio      = 0.978624335
+djo      = 0.977493156
+bi       = 0.226916941
+bj       = 0.117677654
+mini     =        59
+minj     =        60
+av[minj] = 0.108108108
+av[minj] = 0.108108108
+
+ Cycle   4     =  SEQ:  59 (  0.22692) joins Node:  60 (  0.11768)
+
+***  cycle 5
+dmin     = 0.560810811
+dio      = 0.982497553
+djo      = 0.984690468
+bi       = 0.0529575968
+bj       = 0.281501863
+mini     =        59
+minj     =        63
+av[minj] =         0
+av[minj] =         0
+
+ Cycle   5     = Node:  59 ( 0.052958) joins  SEQ:  63 (   0.2815)
+
+***  cycle 6
+dmin     =      0.75
+dio      = 0.982326449
+djo      = 0.974647628
+bi       = 0.378839411
+bj       = 0.371160589
+mini     =        46
+minj     =        75
+av[minj] =         0
+av[minj] =         0
+
+ Cycle   6     =  SEQ:  46 (  0.37884) joins  SEQ:  75 (  0.37116)
+
+***  cycle 7
+dmin     = 0.78313253
+dio      = 0.982615264
+djo      = 0.982702718
+bi       = 0.391522538
+bj       = 0.391609992
+mini     =        54
+minj     =        98
+av[minj] =         0
+av[minj] =         0
+
+ Cycle   7     =  SEQ:  54 (  0.39152) joins  SEQ:  98 (  0.39161)
+
+***  cycle 8
+dmin     = 0.808510638
+dio      = 0.985431995
+djo      = 0.980772498
+bi       = 0.126179662
+bj       = 0.401925571
+mini     =        59
+minj     =        64
+av[minj] =         0
+av[minj] =         0
+
+ Cycle   8     = Node:  59 (  0.12618) joins  SEQ:  64 (  0.40193)
+
+***  cycle 9
+dmin     = 0.815217391
+dio      = 0.983574879
+djo      = 0.984701989
+bi       = 0.407045141
+bj       = 0.0166059854
+mini     =        49
+minj     =        54
+av[minj] = 0.391566265
+av[minj] = 0.391566265
+
+ Cycle   9     =  SEQ:  49 (  0.40705) joins Node:  54 ( 0.016606)
+
+***  cycle 10
+dmin     = 0.831547619
+dio      = 0.980362258
+djo      = 0.979734727
+bi       = 0.0410875746
+bj       = 0.415460044
+mini     =        46
+minj     =        79
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  10     = Node:  46 ( 0.041088) joins  SEQ:  79 (  0.41546)
+
+***  cycle 11
+dmin     = 0.871428571
+dio      = 0.991439096
+djo      = 0.986167363
+bi       = 0.438350152
+bj       = 0.433078419
+mini     =         6
+minj     =        31
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  11     =  SEQ:   6 (  0.43835) joins  SEQ:  31 (  0.43308)
+
+***  cycle 12
+dmin     = 0.865038008
+dio      = 0.985682952
+djo      = 0.985067217
+bi       = 0.0252181762
+bj       = 0.432211137
+mini     =        49
+minj     =        90
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  12     = Node:  49 ( 0.025218) joins  SEQ:  90 (  0.43221)
+
+***  cycle 13
+dmin     = 0.871468496
+dio      = 0.983577554
+djo      = 0.981405157
+bi       = 0.436820446
+bj       = 0.01887424
+mini     =        38
+minj     =        46
+av[minj] = 0.41577381
+av[minj] = 0.41577381
+
+ Cycle  13     =  SEQ:  38 (  0.43682) joins Node:  46 ( 0.018874)
+
+***  cycle 14
+dmin     = 0.885714286
+dio      = 0.988589014
+djo      = 0.99011852
+bi       = 0.44209239
+bj       = 0.443621896
+mini     =         4
+minj     =        86
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  14     =  SEQ:   4 (  0.44209) joins  SEQ:  86 (  0.44362)
+
+***  cycle 15
+dmin     =  0.890625
+dio      = 0.991347802
+djo      = 0.988788469
+bi       = 0.446592166
+bj       = 0.444032834
+mini     =        67
+minj     =        76
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  15     =  SEQ:  67 (  0.44659) joins  SEQ:  76 (  0.44403)
+
+***  cycle 16
+dmin     =     0.875
+dio      = 0.986912813
+djo      = 0.977023252
+bi       = 0.442444781
+bj       = 0.432555219
+mini     =        13
+minj     =        87
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  16     =  SEQ:  13 (  0.44244) joins  SEQ:  87 (  0.43256)
+
+***  cycle 17
+dmin     = 0.880952381
+dio      = 0.984176432
+djo      = 0.985554588
+bi       = 0.0355317933
+bj       = 0.441165268
+mini     =        59
+minj     =        83
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  17     = Node:  59 ( 0.035532) joins  SEQ:  83 (  0.44117)
+
+***  cycle 18
+dmin     = 0.886075949
+dio      = 0.984253212
+djo      = 0.986580809
+bi       = 0.441874176
+bj       = 0.444201773
+mini     =        27
+minj     =        36
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  18     =  SEQ:  27 (  0.44187) joins  SEQ:  36 (   0.4442)
+
+***  cycle 19
+dmin     = 0.888888889
+dio      = 0.986637648
+djo      = 0.986915697
+bi       = 0.44430542
+bj       = 0.444583469
+mini     =        22
+minj     =        32
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  19     =  SEQ:  22 (  0.44431) joins  SEQ:  32 (  0.44458)
+
+***  cycle 20
+dmin     = 0.885245902
+dio      = 0.984510458
+djo      = 0.984918252
+bi       = 0.442419054
+bj       = 0.442826848
+mini     =        37
+minj     =        71
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  20     =  SEQ:  37 (  0.44242) joins  SEQ:  71 (  0.44283)
+
+***  cycle 21
+dmin     = 0.897959184
+dio      = 0.991918632
+djo      = 0.984563056
+bi       = 0.45265738
+bj       = 0.445301804
+mini     =        34
+minj     =        66
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  21     =  SEQ:  34 (  0.45266) joins  SEQ:  66 (   0.4453)
+
+***  cycle 22
+dmin     = 0.897959184
+dio      = 0.985218917
+djo      = 0.990922343
+bi       = 0.446127879
+bj       = 0.451831305
+mini     =        15
+minj     =        84
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  22     =  SEQ:  15 (  0.44613) joins  SEQ:  84 (  0.45183)
+
+***  cycle 23
+dmin     = 0.904761905
+dio      = 0.991178389
+djo      = 0.990845689
+bi       = 0.452547303
+bj       = 0.452214602
+mini     =         9
+minj     =        85
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  23     =  SEQ:   9 (  0.45255) joins  SEQ:  85 (  0.45221)
+
+***  cycle 24
+dmin     = 0.910447761
+dio      = 0.991398924
+djo      = 0.992047928
+bi       = 0.454899378
+bj       = 0.455548383
+mini     =        11
+minj     =        72
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  24     =  SEQ:  11 (   0.4549) joins  SEQ:  72 (  0.45555)
+
+***  cycle 25
+dmin     = 0.894290123
+dio      = 0.982386888
+djo      = 0.982664237
+bi       = 0.00950638729
+bj       = 0.447283736
+mini     =        13
+minj     =        68
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  25     = Node:  13 (0.0095064) joins  SEQ:  68 (  0.44728)
+
+***  cycle 26
+dmin     = 0.906026045
+dio      = 0.989898216
+djo      = 0.986014926
+bi       = 0.454954667
+bj       = 0.0185523736
+mini     =        14
+minj     =        49
+av[minj] = 0.432519004
+av[minj] = 0.432519004
+
+ Cycle  26     =  SEQ:  14 (  0.45495) joins Node:  49 ( 0.018552)
+
+***  cycle 27
+dmin     = 0.91025641
+dio      =  0.991933
+djo      = 0.985714409
+bi       = 0.458237501
+bj       = 0.45201891
+mini     =        35
+minj     =        81
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  27     =  SEQ:  35 (  0.45824) joins  SEQ:  81 (  0.45202)
+
+***  cycle 28
+dmin     = 0.917808219
+dio      = 0.992629537
+djo      = 0.991812072
+bi       = 0.459312842
+bj       = 0.458495377
+mini     =        29
+minj     =        73
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  28     =  SEQ:  29 (  0.45931) joins  SEQ:  73 (   0.4585)
+
+***  cycle 29
+dmin     = 0.914835165
+dio      = 0.989642999
+djo      = 0.990591405
+bi       = 0.0140862362
+bj       = 0.457891786
+mini     =         4
+minj     =        18
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  29     = Node:   4 ( 0.014086) joins  SEQ:  18 (  0.45789)
+
+***  cycle 30
+dmin     = 0.906032582
+dio      = 0.985693421
+djo      = 0.983933556
+bi       = 0.0134200328
+bj       = 0.452136358
+mini     =        59
+minj     =        88
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  30     = Node:  59 (  0.01342) joins  SEQ:  88 (  0.45214)
+
+***  cycle 31
+dmin     = 0.906666667
+dio      = 0.983524376
+djo      = 0.986023997
+bi       = 0.452083523
+bj       = 0.454583144
+mini     =        24
+minj     =        91
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  31     =  SEQ:  24 (  0.45208) joins  SEQ:  91 (  0.45458)
+
+***  cycle 32
+dmin     = 0.913793103
+dio      = 0.987401948
+djo      = 0.988194712
+bi       = 0.0120557253
+bj       = 0.457292934
+mini     =        22
+minj     =        56
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  32     = Node:  22 ( 0.012056) joins  SEQ:  56 (  0.45729)
+
+***  cycle 33
+dmin     = 0.923076923
+dio      = 0.994435853
+djo      = 0.989312781
+bi       = 0.464099997
+bj       = 0.458976926
+mini     =        55
+minj     =        57
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  33     =  SEQ:  55 (   0.4641) joins  SEQ:  57 (  0.45898)
+
+***  cycle 34
+dmin     = 0.91025641
+dio      = 0.988724836
+djo      = 0.981872122
+bi       = 0.458554562
+bj       = 0.451701348
+mini     =        17
+minj     =        39
+av[minj] =     5e-07
+av[minj] =     5e-07
+
+ Cycle  34     =  SEQ:  17 (  0.45855) joins Node:  39 (   0.4517)
+
+***  cycle 35
+dmin     = 0.913043478
+dio      = 0.986351501
+djo      = 0.986705339
+bi       = 0.45634482
+bj       = 0.456698658
+mini     =        19
+minj     =        58
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  35     =  SEQ:  19 (  0.45634) joins  SEQ:  58 (   0.4567)
+
+***  cycle 36
+dmin     = 0.919689628
+dio      = 0.988851984
+djo      = 0.990413417
+bi       = 0.0060510751
+bj       = 0.46062553
+mini     =        14
+minj     =        92
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  36     = Node:  14 (0.0060511) joins  SEQ:  92 (  0.46063)
+
+***  cycle 37
+dmin     = 0.911392405
+dio      = 0.983878502
+djo      = 0.984743205
+bi       = 0.455263851
+bj       = 0.456128554
+mini     =         8
+minj     =        33
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  37     =  SEQ:   8 (  0.45526) joins  SEQ:  33 (  0.45613)
+
+***  cycle 38
+dmin     = 0.911764706
+dio      = 0.984594222
+djo      = 0.984392671
+bi       = 0.455983128
+bj       = 0.455781578
+mini     =         3
+minj     =         5
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  38     =  SEQ:   3 (  0.45598) joins  SEQ:   5 (  0.45578)
+
+***  cycle 39
+dmin     = 0.924744898
+dio      = 0.991035714
+djo      = 0.988551463
+bi       = 0.463614575
+bj       = 0.0121507314
+mini     =        12
+minj     =        15
+av[minj] = 0.448979592
+av[minj] = 0.448979592
+
+ Cycle  39     =  SEQ:  12 (  0.46361) joins Node:  15 ( 0.012151)
+
+***  cycle 40
+dmin     = 0.929019081
+dio      = 0.989995741
+djo      = 0.99310428
+bi       = 0.0272409854
+bj       = 0.422585549
+mini     =         6
+minj     =        61
+av[minj] = 0.0434782609
+av[minj] = 0.0434782609
+
+ Cycle  40     = Node:   6 ( 0.027241) joins Node:  61 (  0.42259)
+
+***  cycle 41
+dmin     = 0.927447552
+dio      = 0.989665983
+djo      = 0.991085881
+bi       = 0.00788562221
+bj       = 0.464433725
+mini     =        35
+minj     =        94
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  41     = Node:  35 (0.0078856) joins  SEQ:  94 (  0.46443)
+
+***  cycle 42
+dmin     = 0.915254237
+dio      = 0.983476713
+djo      = 0.984668851
+bi       = 0.45703105
+bj       = 0.458223187
+mini     =        45
+minj     =       100
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  42     =  SEQ:  45 (  0.45703) joins  SEQ: 100 (  0.45822)
+
+***  cycle 43
+dmin     = 0.921038961
+dio      = 0.985646433
+djo      = 0.986550587
+bi       = 0.00673406994
+bj       = 0.460971558
+mini     =        24
+minj     =        48
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  43     = Node:  24 (0.0067341) joins  SEQ:  48 (  0.46097)
+
+***  cycle 44
+dmin     = 0.923546385
+dio      = 0.983835681
+djo      = 0.988637889
+bi       = 0.0236378408
+bj       = 0.464174296
+mini     =        38
+minj     =        89
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  44     = Node:  38 ( 0.023638) joins  SEQ:  89 (  0.46417)
+
+***  cycle 45
+dmin     = 0.931372549
+dio      = 0.985367067
+djo      = 0.992931039
+bi       = 0.0192813375
+bj       = 0.469468261
+mini     =        37
+minj     =        47
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  45     = Node:  37 ( 0.019281) joins  SEQ:  47 (  0.46947)
+
+***  cycle 46
+dmin     = 0.926311031
+dio      = 0.987083567
+djo      = 0.984533722
+bi       = 0.0213924636
+bj       = 0.461880592
+mini     =        27
+minj     =        97
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  46     = Node:  27 ( 0.021392) joins  SEQ:  97 (  0.46188)
+
+***  cycle 47
+dmin     = 0.922562331
+dio      = 0.983252287
+djo      = 0.986121193
+bi       = 0.459846712
+bj       = 0.00969932754
+mini     =        44
+minj     =        59
+av[minj] = 0.453016291
+av[minj] = 0.453016291
+
+ Cycle  47     =  SEQ:  44 (  0.45985) joins Node:  59 (0.0096993)
+
+***  cycle 48
+dmin     = 0.932543729
+dio      = 0.985790321
+djo      = 0.991102213
+bi       = 0.016470857
+bj       = 0.00520403449
+mini     =        13
+minj     =        35
+av[minj] = 0.463723776
+av[minj] = 0.463723776
+
+ Cycle  48     = Node:  13 ( 0.016471) joins Node:  35 ( 0.005204)
+
+***  cycle 49
+dmin     = 0.936828717
+dio      = 0.988416343
+djo      = 0.992227473
+bi       = 0.00961224168
+bj       = 0.470319923
+mini     =        22
+minj     =        25
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  49     = Node:  22 (0.0096122) joins  SEQ:  25 (  0.47032)
+
+***  cycle 50
+dmin     = 0.938107838
+dio      = 0.990854568
+djo      = 0.99058082
+bi       = 0.0093459788
+bj       = 0.468917045
+mini     =        14
+minj     =        23
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  50     = Node:  14 ( 0.009346) joins  SEQ:  23 (  0.46892)
+
+***  cycle 51
+dmin     = 0.940402248
+dio      = 0.992321619
+djo      = 0.98900259
+bi       = 0.471860638
+bj       = 0.0195620177
+mini     =         7
+minj     =        34
+av[minj] = 0.448979592
+av[minj] = 0.448979592
+
+ Cycle  51     =  SEQ:   7 (  0.47186) joins Node:  34 ( 0.019562)
+
+***  cycle 52
+dmin     = 0.938461538
+dio      = 0.98788332
+djo      = 0.991318218
+bi       = 0.46751332
+bj       = 0.470948218
+mini     =        41
+minj     =        42
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  52     =  SEQ:  41 (  0.46751) joins  SEQ:  42 (  0.47095)
+
+***  cycle 53
+dmin     = 0.935407244
+dio      = 0.987957849
+djo      = 0.98757275
+bi       = 0.0127679666
+bj       = 0.00573787966
+mini     =        17
+minj     =        38
+av[minj] = 0.461773193
+av[minj] = 0.461773193
+
+ Cycle  53     = Node:  17 ( 0.012768) joins Node:  38 (0.0057379)
+
+***  cycle 54
+dmin     = 0.939393939
+dio      = 0.98780656
+djo      = 0.98996439
+bi       = 0.468618055
+bj       = 0.470775885
+mini     =        16
+minj     =        21
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  54     =  SEQ:  16 (  0.46862) joins  SEQ:  21 (  0.47078)
+
+***  cycle 55
+dmin     = 0.944444444
+dio      = 0.992482542
+djo      = 0.989829117
+bi       = 0.473548935
+bj       = 0.47089551
+mini     =         2
+minj     =        69
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  55     =  SEQ:   2 (  0.47355) joins  SEQ:  69 (   0.4709)
+
+***  cycle 56
+dmin     = 0.943396226
+dio      = 0.992413098
+djo      = 0.988320764
+bi       = 0.47374428
+bj       = 0.469651947
+mini     =        28
+minj     =        77
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  56     =  SEQ:  28 (  0.47374) joins  SEQ:  77 (  0.46965)
+
+***  cycle 57
+dmin     = 0.947368421
+dio      = 0.987826408
+djo      = 0.995475301
+bi       = 0.469859764
+bj       = 0.477508657
+mini     =        20
+minj     =        53
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  57     =  SEQ:  20 (  0.46986) joins  SEQ:  53 (  0.47751)
+
+***  cycle 58
+dmin     = 0.938767035
+dio      = 0.987007197
+djo      = 0.987555606
+bi       = 0.00858983303
+bj       = 0.469657722
+mini     =        24
+minj     =        96
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  58     = Node:  24 (0.0085898) joins  SEQ:  96 (  0.46966)
+
+***  cycle 59
+dmin     = 0.944935291
+dio      = 0.991276004
+djo      = 0.987305093
+bi       = 0.0120806522
+bj       = 0.47048219
+mini     =        12
+minj     =        70
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  59     = Node:  12 ( 0.012081) joins  SEQ:  70 (  0.47048)
+
+***  cycle 60
+dmin     = 0.937963574
+dio      = 0.98537062
+djo      = 0.986277204
+bi       = 0.00724732942
+bj       = 0.0118079608
+mini     =        44
+minj     =        45
+av[minj] = 0.457627119
+av[minj] = 0.457627119
+
+ Cycle  60     = Node:  44 (0.0072473) joins Node:  45 ( 0.011808)
+
+***  cycle 61
+dmin     = 0.950449504
+dio      = 0.992374257
+djo      = 0.988717203
+bi       = 0.00685215498
+bj       = 0.00401270729
+mini     =         7
+minj     =        24
+av[minj] = 0.469383518
+av[minj] = 0.469383518
+
+ Cycle  61     = Node:   7 (0.0068522) joins Node:  24 (0.0040127)
+
+***  cycle 62
+dmin     = 0.951807229
+dio      = 0.991265961
+djo      = 0.989634438
+bi       = 0.476719376
+bj       = 0.475087853
+mini     =        10
+minj     =        74
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  62     =  SEQ:  10 (  0.47672) joins  SEQ:  74 (  0.47509)
+
+***  cycle 63
+dmin     = 0.952008929
+dio      = 0.987672771
+djo      = 0.992301804
+bi       = 0.00598632589
+bj       = 0.478318981
+mini     =        17
+minj     =        95
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  63     = Node:  17 (0.0059863) joins  SEQ:  95 (  0.47832)
+
+***  cycle 64
+dmin     = 0.947784105
+dio      = 0.98637612
+djo      = 0.988759829
+bi       = 0.00371841143
+bj       = 0.475083907
+mini     =        44
+minj     =        50
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  64     = Node:  44 (0.0037184) joins  SEQ:  50 (  0.47508)
+
+***  cycle 65
+dmin     =      0.96
+dio      = 0.991735342
+djo      = 0.990666676
+bi       = 0.480534333
+bj       = 0.479465667
+mini     =        26
+minj     =        43
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  65     =  SEQ:  26 (  0.48053) joins  SEQ:  43 (  0.47947)
+
+***  cycle 66
+dmin     = 0.965517241
+dio      = 0.991976581
+djo      = 0.995494206
+bi       = 0.00731559809
+bj       = 0.484517433
+mini     =        20
+minj     =        51
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  66     = Node:  20 (0.0073156) joins  SEQ:  51 (  0.48452)
+
+***  cycle 67
+dmin     = 0.962713883
+dio      = 0.991273778
+djo      = 0.992175561
+bi       = 0.0163965096
+bj       = 0.481807833
+mini     =         6
+minj     =        80
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  67     = Node:   6 ( 0.016397) joins  SEQ:  80 (  0.48181)
+
+***  cycle 68
+dmin     = 0.96063649
+dio      = 0.990654573
+djo      = 0.990531851
+bi       = 0.00437514176
+bj       = 0.0145706096
+mini     =        17
+minj     =        37
+av[minj] = 0.465686275
+av[minj] = 0.465686275
+
+ Cycle  68     = Node:  17 (0.0043751) joins Node:  37 ( 0.014571)
+
+***  cycle 69
+dmin     = 0.96969697
+dio      = 0.995140737
+djo      = 0.992944456
+bi       = 0.485946625
+bj       = 0.483750345
+mini     =        30
+minj     =        99
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  69     =  SEQ:  30 (  0.48595) joins  SEQ:  99 (  0.48375)
+
+***  cycle 70
+dmin     = 0.958735017
+dio      = 0.989050528
+djo      = 0.988124685
+bi       = 0.0101334602
+bj       = 0.0223828482
+mini     =        16
+minj     =        19
+av[minj] = 0.456521739
+av[minj] = 0.456521739
+
+ Cycle  70     = Node:  16 ( 0.010133) joins Node:  19 ( 0.022383)
+
+***  cycle 71
+dmin     = 0.966028638
+dio      = 0.990978915
+djo      = 0.991206853
+bi       = 0.48290035
+bj       = 0.01471393
+mini     =         1
+minj     =        22
+av[minj] = 0.468414358
+av[minj] = 0.468414358
+
+ Cycle  71     =  SEQ:   1 (   0.4829) joins Node:  22 ( 0.014714)
+
+***  cycle 72
+dmin     = 0.963335496
+dio      = 0.991211127
+djo      = 0.988036639
+bi       = 0.0280311114
+bj       = 0.480080504
+mini     =        11
+minj     =        93
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  72     = Node:  11 ( 0.028031) joins  SEQ:  93 (  0.48008)
+
+***  cycle 73
+dmin     = 0.969286081
+dio      = 0.991606867
+djo      = 0.992981579
+bi       = 0.0265381022
+bj       = 0.00397345451
+mini     =         4
+minj     =         6
+av[minj] = 0.481356942
+av[minj] = 0.481356942
+
+ Cycle  73     = Node:   4 ( 0.026538) joins Node:   6 (0.0039735)
+
+***  cycle 74
+dmin     = 0.96606579
+dio      = 0.99112014
+djo      = 0.990630358
+bi       = 0.011579673
+bj       = 0.0374755043
+mini     =        28
+minj     =        67
+av[minj] = 0.4453125
+av[minj] = 0.4453125
+
+ Cycle  74     = Node:  28 (  0.01158) joins Node:  67 ( 0.037476)
+
+***  cycle 75
+dmin     = 0.964787256
+dio      = 0.991025828
+djo      = 0.988834075
+bi       = 0.00826475238
+bj       = 0.0181422366
+mini     =         7
+minj     =        27
+av[minj] = 0.463155515
+av[minj] = 0.463155515
+
+ Cycle  75     = Node:   7 (0.0082648) joins Node:  27 ( 0.018142)
+
+***  cycle 76
+dmin     = 0.96096453
+dio      = 0.987141508
+djo      = 0.987894655
+bi       = 0.0244094895
+bj       = 0.00696678591
+mini     =         8
+minj     =        44
+av[minj] = 0.473892053
+av[minj] = 0.473892053
+
+ Cycle  76     = Node:   8 ( 0.024409) joins Node:  44 (0.0069668)
+
+***  cycle 77
+dmin     = 0.963256841
+dio      = 0.986549536
+djo      = 0.990964075
+bi       = 0.0235387978
+bj       = 0.0146049212
+mini     =         3
+minj     =        41
+av[minj] = 0.469230769
+av[minj] = 0.469230769
+
+ Cycle  77     = Node:   3 ( 0.023539) joins Node:  41 ( 0.014605)
+
+***  cycle 78
+dmin     = 0.977373943
+dio      = 0.991806996
+djo      = 0.996312759
+bi       = 0.0173801713
+bj       = 0.490939853
+mini     =        14
+minj     =        52
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  78     = Node:  14 (  0.01738) joins  SEQ:  52 (  0.49094)
+
+***  cycle 79
+dmin     = 0.972116956
+dio      = 0.991678893
+djo      = 0.99152728
+bi       = 0.0337533321
+bj       = 0.00294977619
+mini     =         9
+minj     =        28
+av[minj] = 0.483032895
+av[minj] = 0.483032895
+
+ Cycle  79     = Node:   9 ( 0.033753) joins Node:  28 (0.0029498)
+
+***  cycle 80
+dmin     = 0.981095446
+dio      = 0.993243593
+djo      = 0.995202718
+bi       = 0.00492512043
+bj       = 0.00667880049
+mini     =         4
+minj     =        30
+av[minj] = 0.484848485
+av[minj] = 0.484848485
+
+ Cycle  80     = Node:   4 (0.0049251) joins Node:  30 (0.0066788)
+
+***  cycle 81
+dmin     = 0.97332428
+dio      = 0.988577521
+djo      = 0.991669715
+bi       = 0.0188441783
+bj       = 0.00820823691
+mini     =        13
+minj     =        26
+av[minj] =      0.48
+av[minj] =      0.48
+
+ Cycle  81     = Node:  13 ( 0.018844) joins Node:  26 (0.0082082)
+
+***  cycle 82
+dmin     = 0.974786532
+dio      = 0.990787233
+djo      = 0.990799312
+bi       = 0.00499359836
+bj       = 0.0114956908
+mini     =         7
+minj     =        10
+av[minj] = 0.475903614
+av[minj] = 0.475903614
+
+ Cycle  82     = Node:   7 (0.0049936) joins Node:  10 ( 0.011496)
+
+***  cycle 83
+dmin     = 0.97320397
+dio      = 0.990529018
+djo      = 0.988761183
+bi       = 0.00581815434
+bj       = 0.485718067
+mini     =        11
+minj     =        82
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  83     = Node:  11 (0.0058182) joins  SEQ:  82 (  0.48572)
+
+***  cycle 84
+dmin     = 0.976641414
+dio      = 0.992488076
+djo      = 0.989695542
+bi       = 0.0174947519
+bj       = 0.00755693147
+mini     =         2
+minj     =        16
+av[minj] = 0.479367509
+av[minj] = 0.479367509
+
+ Cycle  84     = Node:   2 ( 0.017495) joins Node:  16 (0.0075569)
+
+***  cycle 85
+dmin     = 0.972929804
+dio      = 0.988884885
+djo      = 0.989368133
+bi       = 0.00459485736
+bj       = 0.00622426083
+mini     =         3
+minj     =         8
+av[minj] = 0.480482265
+av[minj] = 0.480482265
+
+ Cycle  85     = Node:   3 (0.0045949) joins Node:   8 (0.0062243)
+
+***  cycle 86
+dmin     = 0.981687972
+dio      = 0.989986243
+djo      = 0.994576808
+bi       = 0.0160810573
+bj       = 0.0103806481
+mini     =        12
+minj     =        20
+av[minj] = 0.482758621
+av[minj] = 0.482758621
+
+ Cycle  86     = Node:  12 ( 0.016081) joins Node:  20 ( 0.010381)
+
+***  cycle 87
+dmin     = 0.981077105
+dio      = 0.989632254
+djo      = 0.991517856
+bi       = 0.00313084921
+bj       = 0.0111631085
+mini     =         3
+minj     =        17
+av[minj] = 0.480318245
+av[minj] = 0.480318245
+
+ Cycle  87     = Node:   3 (0.0031308) joins Node:  17 ( 0.011163)
+
+***  cycle 88
+dmin     = 0.983507402
+dio      = 0.990829946
+djo      = 0.992221747
+bi       = 0.00445581573
+bj       = 0.0057874616
+mini     =        11
+minj     =        13
+av[minj] = 0.48666214
+av[minj] = 0.48666214
+
+ Cycle  88     = Node:  11 (0.0044558) joins Node:  13 (0.0057875)
+
+***  cycle 89
+dmin     = 0.98661422
+dio      = 0.992727419
+djo      = 0.993090878
+bi       = 0.0101110616
+bj       = 0.00264485311
+mini     =         1
+minj     =        12
+av[minj] = 0.490843986
+av[minj] = 0.490843986
+
+ Cycle  89     = Node:   1 ( 0.010111) joins Node:  12 (0.0026449)
+
+***  cycle 90
+dmin     = 0.989961806
+dio      = 0.994774681
+djo      = 0.99268142
+bi       = 0.00547981
+bj       = 0.00787579488
+mini     =         4
+minj     =         9
+av[minj] = 0.486058478
+av[minj] = 0.486058478
+
+ Cycle  90     = Node:   4 (0.0054798) joins Node:   9 (0.0078758)
+
+***  cycle 91
+dmin     = 0.991676772
+dio      = 0.99398446
+djo      = 0.994656604
+bi       = 0.00052141148
+bj       = 0.0346359965
+mini     =         4
+minj     =        55
+av[minj] = 0.461538462
+av[minj] = 0.461538462
+
+ Cycle  91     = Node:   4 (0.00052141) joins Node:  55 ( 0.034636)
+
+***  cycle 92
+dmin     = 0.986593886
+dio      = 0.992084403
+djo      = 0.991878422
+bi       = 0.00507922618
+bj       = 0.0014402516
+mini     =         2
+minj     =        11
+av[minj] = 0.491753701
+av[minj] = 0.491753701
+
+ Cycle  92     = Node:   2 (0.0050792) joins Node:  11 (0.0014403)
+
+***  cycle 93
+dmin     = 0.993661954
+dio      = 0.994863194
+djo      = 0.994674802
+bi       = 0.00108678665
+bj       = 0.00804980906
+mini     =         4
+minj     =        14
+av[minj] = 0.488686972
+av[minj] = 0.488686972
+
+ Cycle  93     = Node:   4 (0.0010868) joins Node:  14 (0.0080498)
+
+***  cycle 94
+dmin     = 0.993351064
+dio      = 0.991150277
+djo      = 0.997173479
+bi       = 0.00627066499
+bj       = 0.499687133
+mini     =         7
+minj     =        78
+av[minj] =         0
+av[minj] =         0
+
+ Cycle  94     = Node:   7 (0.0062707) joins  SEQ:  78 (  0.49969)
+
+***  cycle 95
+dmin     = 0.989564123
+dio      = 0.990532282
+djo      = 0.99441332
+bi       = 0.00230299052
+bj       = 0.0378184709
+mini     =         3
+minj     =        29
+av[minj] = 0.45890411
+av[minj] = 0.45890411
+
+ Cycle  95     = Node:   3 ( 0.002303) joins Node:  29 ( 0.037818)
+
+***  cycle 96
+dmin     = 0.990766401
+dio      = 0.993224998
+djo      = 0.993041601
+bi       = 0.00216778877
+bj       = 0.000509440294
+mini     =         1
+minj     =         3
+av[minj] = 0.494782062
+av[minj] = 0.494782062
+
+ Cycle  96     = Node:   1 (0.0021678) joins Node:   3 (0.00050944)
+
+***  cycle 97
+dmin     = 0.992749968
+dio      = 0.991913796
+djo      = 0.995395545
+bi       = 0.00133716628
+bj       = 0.00128488223
+mini     =         2
+minj     =         4
+av[minj] = 0.496830977
+av[minj] = 0.496830977
+
+ Cycle  97     = Node:   2 (0.0013372) joins Node:   4 (0.0012849)
+
+ Cycle  98 (Last cycle, trichotomy):
+
+		 Node:   1 (0.00066208) joins
+		 Node:   2 (0.00036928) joins
+		 Node:   7 (   0.0011) 
