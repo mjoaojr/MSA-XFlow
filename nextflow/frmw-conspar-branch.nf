@@ -11,6 +11,7 @@ frmw_slmax = '~/MSA-XFlow/slmax/src/frmw_slmax'
 frmw_nj = '~/MSA-XFlow/nj/src/frmw_nj'
 frmw_align = '~/MSA-XFlow/align/src/frmw_align'
 frmw_aligncons = '~/MSA-XFlow/aligncons/src/frmw_aligncons'
+frmw_alignconspar = '~/MSA-XFlow/alignconspar/src/frmw_alignconspar'
 mclustalw = '~/mnt/clustalw/mclustalw/src/clustalw2'
 
 process full 
@@ -37,7 +38,7 @@ process consistency
 
 	script:
 		mode = 'proba'
-//		print ('CPUs: ' + cpus)
+//		print ('CPUs consistency: ' + cpus)
 		"""
 		$frmw_conspar -ALIGN -INFILE=$in -NTHR=${task.cpus}
 		"""
@@ -130,7 +131,43 @@ process alignment_cons
 	gtopt = gtmode.toUpperCase()
 	clmode = 1
 	"""
+//	print ('CPUs alignCons: ' + cpus)
 	$frmw_aligncons -ALIGN -CLUSTERING=$gtopt -INFILE=$infile -SSFILE=$ss -USETREE=$tree -CLFILE=$constraints -MAXDIV=0 -OUTPUT=GCG
+	"""
+}
+
+process alignment_consparhi
+{
+//	cpus Runtime.runtime.availableProcessors() - params.n
+	cpus 4
+	input:
+		tuple val (filename), path (infile), path (ss), path (tree), val (ssmode), val (gtmode), path (constraints)
+	output:
+		tuple val (filename), path (infile), path (ss), path (tree), val (ssmode), val (gtmode), val (clmode), path ("${infile.baseName}.msf")
+
+	script:
+//	print ('Alignment: ' + infile + ' ' + ss + ' ' + tree + ' ' + ssmode + ' ' + gtmode)
+	gtopt = gtmode.toUpperCase()
+	clmode = 1
+	"""
+	$frmw_alignconspar -ALIGN -CLUSTERING=$gtopt -INFILE=$infile -SSFILE=$ss -USETREE=$tree -CLFILE=$constraints -MAXDIV=0 -OUTPUT=GCG -NTHR=${task.cpus}
+	"""
+}
+
+process alignment_consparlow
+{
+	cpus 2
+	input:
+		tuple val (filename), path (infile), path (ss), path (tree), val (ssmode), val (gtmode), path (constraints)
+	output:
+		tuple val (filename), path (infile), path (ss), path (tree), val (ssmode), val (gtmode), val (clmode), path ("${infile.baseName}.msf")
+
+	script:
+//	print ('Alignment: ' + infile + ' ' + ss + ' ' + tree + ' ' + ssmode + ' ' + gtmode)
+	gtopt = gtmode.toUpperCase()
+	clmode = 1
+	"""
+	$frmw_alignconspar -ALIGN -CLUSTERING=$gtopt -INFILE=$infile -SSFILE=$ss -USETREE=$tree -CLFILE=$constraints -MAXDIV=0 -OUTPUT=GCG -NTHR=${task.cpus}
 	"""
 }
 
@@ -212,8 +249,20 @@ workflow
 	alfiles = alignment (gtfile)
 //	gtfile.view()
 //	alfinal = check_align (alfile)
-//	gtconsfiles.view ()
-	alconsfiles = alignment_cons (gtconsfiles)
-	msffiles = alfiles.mix (alconsfiles)
+//	gtconsfiles.view {v -> "$v[4]"}
+
+	gtconsfiles.branch {it -> 
+		hiprio: (it[4] == "proba" && it[5] == "upgma") || (it[4] == "proba" && it[5] == "slmin")
+		lowprio: true
+		}
+		.set {queues}
+//	queues.hiprio.view {it -> "Hiprio: ${it[4]}"}
+//	queues.lowprio.view {it -> "Lowprio: ${it[4]}"}
+
+	alconsfileshi = alignment_consparhi (queues.hiprio)
+//	alconsfileslow = alignment_cons (queues.lowprio)
+	alconsfileslow = alignment_consparlow (queues.lowprio)
+	msffiles = alfiles.mix (alconsfileshi)
+	msffiles = msffiles.mix (alconsfileslow)
 //	finalfiles = copia (msffiles, params.out)
 }

@@ -29,7 +29,9 @@ process full
 
 process consistency 
 {
-	cpus Runtime.runtime.availableProcessors() - params.n
+	queue 'hiprio'
+//	cpus = Runtime.runtime.availableProcessors() - params.n
+	cpus 8 - params.n
 	input:
 		path(in)
 	output:
@@ -37,7 +39,7 @@ process consistency
 
 	script:
 		mode = 'proba'
-//		print ('CPUs: ' + cpus)
+		print ('CPUs: ' + cpus + ' N: ' + params.n)
 		"""
 		$frmw_conspar -ALIGN -INFILE=$in -NTHR=${task.cpus}
 		"""
@@ -45,7 +47,9 @@ process consistency
 
 process similarity_scores 
 {
+//	executor 'local'
 	maxForks params.n
+	cpus = 1
 	input:
 		tuple path(in), val(mode)
 	output:
@@ -55,28 +59,34 @@ process similarity_scores
 //	print ('SS: ' + in + ' ' + mode)
 	if (mode == 'full')
 		"""
+		echo $mode $task.executor
 		$frmw_full -ALIGN -INFILE=$in
 		"""
 	else if (mode == 'quick')
 		"""
+		echo $mode $task.executor
 		$frmw_quick -ALIGN -INFILE=$in
 		"""
 	else if (mode == 'kmers')
 		"""
+		echo $mode $task.executor
 		$frmw_kmers -ALIGN -INFILE=$in
 		"""
 	else if (mode == 'proba')
 		"""
+		echo $mode $task.executor
 		$frmw_proba -ALIGN -INFILE=$in
 		"""
 	else
 		"""
+		echo $mode $task.executor
 		$frmw_lcs -ALIGN -INFILE=$in
 		"""
 }
 
 process guide_tree 
 {
+	cpus = 1
 	input:
 		tuple val (infilename), path (infile), path (ss), val (ssmode), val (mode)
 	output:
@@ -104,6 +114,7 @@ process guide_tree
 
 process alignment 
 {
+	cpus = 1
 	input:
 		tuple val (filename), path (infile), path (ss), path (tree), val (ssmode), val (gtmode)
 	output:
@@ -120,6 +131,8 @@ process alignment
 
 process alignment_cons 
 {
+	cpus = 1
+	queue {ssmode == 'proba' ? 'hiprio' : 'lowprio'}
 	input:
 		tuple val (filename), path (infile), path (ss), path (tree), val (ssmode), val (gtmode), path (constraints)
 	output:
