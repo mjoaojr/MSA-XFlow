@@ -74,8 +74,8 @@ int MSA::multiSeqAlign(Alignment* alnPtr, DistMatrix* distMat, vector<int>* seqW
     }
 
 	distMat->printArray();
-    for (i = 1; i <= _numSeqs; i++)
-	printf ("%d\t", maxid[i]);
+//    for (i = 1; i <= _numSeqs; i++)
+//	printf ("%d\t", maxid[i]);
 
     // group the sequences according to their relative divergence
 
@@ -98,6 +98,7 @@ int MSA::multiSeqAlign(Alignment* alnPtr, DistMatrix* distMat, vector<int>* seqW
         
         const vector<vector<int> >* ptrToSets = progSteps->getSteps();
 
+	/*
         for (set = 1; set <= _numSteps; ++set)
 	{
 		printf ("[");
@@ -109,6 +110,7 @@ int MSA::multiSeqAlign(Alignment* alnPtr, DistMatrix* distMat, vector<int>* seqW
 		}
 		printf ("]\n");
 	}
+	*/
         
         
         for (set = 1; set <= _numSteps; ++set)

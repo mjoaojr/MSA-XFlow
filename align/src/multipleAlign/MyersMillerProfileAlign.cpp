@@ -138,7 +138,7 @@ int MyersMillerProfileAlign::profileAlign(Alignment* alnPtr, DistMatrix* distMat
     prfLength1 = 0;
     for (i = 0; i < numSeq; i++)
     {
-	    cout << "weight seq [" << i << "] = " << alnPtr->getSeqWeight(i) << "\n";
+//	    cout << "weight seq [" << i << "] = " << alnPtr->getSeqWeight(i) << "\n";
         if ((*group)[i + 1] == 1)
         {    
             if (alnPtr->getSeqLength(i + 1) > prfLength1)

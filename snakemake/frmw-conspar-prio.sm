@@ -1,0 +1,342 @@
+frmw_full = '~/MSA-XFlow/full/src/frmw_full'
+frmw_quick = '~/MSA-XFlow/quick/src/frmw_quick'
+frmw_kmers = '~/MSA-XFlow/kmers/src/frmw_kmers'
+frmw_lcs = '~/MSA-XFlow/lcs/src/frmw_lcs'
+frmw_proba = '~/MSA-XFlow/proba/src/frmw_proba'
+frmw_cons = '~/MSA-XFlow/consistency/src/frmw_cons'
+frmw_conspar = '~/MSA-XFlow/conspar/src/frmw_conspar'
+frmw_upgma = '~/MSA-XFlow/upgma/src/frmw_upgma'
+frmw_slmin = '~/MSA-XFlow/slmin/src/frmw_slmin'
+frmw_slmax = '~/MSA-XFlow/slmax/src/frmw_slmax'
+frmw_nj = '~/MSA-XFlow/nj/src/frmw_nj'
+frmw_align = '~/MSA-XFlow/align/src/frmw_align'
+frmw_aligncons = '~/MSA-XFlow/aligncons/src/frmw_aligncons'
+frmw_alignconspar = '~/MSA-XFlow/alignconspar/src/frmw_alignconspar'
+mclustalw = '~/mnt/clustalw/mclustalw/src/clustalw2'
+
+seqs = config["seqs"]
+thr = config["thr"]-1
+thr2 = (config["thr"]//2) - 1
+modes = ["full", "quick", "lcs", "kmers", "proba"]
+modeshi = ["proba"]
+modeslow = ["full", "quick", "lcs", "kmers"]
+gts = ["upgma", "nj", "slmin", "slmax"]
+gtslow = ["nj", "slmax"]
+#gtshi = ["upgma", "slmin"]
+maskss = f"ss/{seqs}." + "{mode}.ss"
+maskgt = f"dnd/{seqs}." + "{mode}." + "{gt}.dnd"
+maskaln = f"aln/{seqs}." + "{mode}." + "{gt}.msf"
+maskalncons = f"alncons/{seqs}." + "{mode}." + "{gt}.cons.msf"
+maskalnconshi = f"alncons/{seqs}." + "{modehi}." + "{gthi}.cons.msf"
+ssfiles=expand (maskss, mode=modes)
+#in_tfa=f"input/{seqs}.in_tfa"
+
+ruleorder: alignconsupgma > alignconsslmin > aligncons
+ruleorder: upgmaproba > upgma
+ruleorder: slminproba > slmin
+
+rule all:
+	input:
+		expand (maskaln, mode=modes, gt=gts),
+		expand (maskalncons, mode=modes, gt=gts),
+#		expand (maskalnconshi, modehi=modeshi, gthi=gtshi)
+#		f"ss/{seqs}.full.ss",
+#		f"ss/{seqs}.quick.ss",
+#		f"ss/{seqs}.lcs.ss",
+#		f"ss/{seqs}.kmers.ss"
+
+rule full:
+	input:
+		f"input/{seqs}.in_tfa"
+	output:
+		f"ss/{seqs}.full.ss"
+	priority: 100
+	shell:
+		"""
+		ln -s ../input/{seqs}.in_tfa full/{seqs}.in_tfa
+		echo "full" > output/{seqs}.full.ss.date
+		date -Ins >> output/{seqs}.full.ss.date
+		{frmw_full} -ALIGN -INFILE=full/{seqs}.in_tfa > output/{seqs}.full.ss.out
+		date -Ins >> output/{seqs}.full.ss.date
+		rm -f full/{seqs}.aln
+		mv full/{seqs}.full.ss ss
+		rm full/{seqs}.in_tfa
+		"""
+rule quick:
+	input:
+		f"input/{seqs}.in_tfa"
+	output:
+		f"ss/{seqs}.quick.ss"
+	priority: 100
+	shell:
+		"""
+		ln -s ../input/{seqs}.in_tfa quick/{seqs}.in_tfa
+		echo "quick" > output/{seqs}.quick.ss.date
+		date -Ins >> output/{seqs}.quick.ss.date
+		{frmw_quick} -ALIGN -INFILE=quick/{seqs}.in_tfa > output/{seqs}.quick.ss.out
+		date -Ins >> output/{seqs}.quick.ss.date
+		rm -f quick/{seqs}.aln
+		mv quick/{seqs}.quick.ss ss
+		rm quick/{seqs}.in_tfa
+		"""
+
+rule lcs:
+	input:
+		f"input/{seqs}.in_tfa"
+	output:
+		f"ss/{seqs}.lcs.ss"
+	priority: 100
+	shell:
+		"""
+		ln -s ../input/{seqs}.in_tfa lcs/{seqs}.in_tfa
+		echo "lcs" > output/{seqs}.lcs.ss.date
+		date -Ins >> output/{seqs}.lcs.ss.date
+		{frmw_lcs} -ALIGN -INFILE=lcs/{seqs}.in_tfa > output/{seqs}.lcs.ss.out
+		date -Ins >> output/{seqs}.lcs.ss.date
+		rm -f lcs/{seqs}.aln
+		mv lcs/{seqs}.lcs.ss ss
+		rm lcs/{seqs}.in_tfa
+		"""
+rule kmers:
+	input:
+		f"input/{seqs}.in_tfa"
+	output:
+		f"ss/{seqs}.kmers.ss"
+	priority: 100
+	shell:
+		"""
+		ln -s ../input/{seqs}.in_tfa kmers/{seqs}.in_tfa
+		echo "kmers" > output/{seqs}.kmers.ss.date
+		date -Ins >> output/{seqs}.kmers.ss.date
+		{frmw_kmers} -ALIGN -INFILE=kmers/{seqs}.in_tfa > output/{seqs}.kmers.ss.out
+		date -Ins >> output/{seqs}.kmers.ss.date
+		rm -f kmers/{seqs}.aln
+		mv kmers/{seqs}.kmers.ss ss
+		rm kmers/{seqs}.in_tfa
+		"""
+
+rule upgma:
+	input:
+		ssfiles="ss/{seqs}.{mode}.ss",
+		in_tfa=f"input/{seqs}.in_tfa"
+	output:
+		"dnd/{seqs}.{mode}.upgma.dnd"
+	priority: 75
+	shell:
+		"""
+		if [ ! -f upgma/{seqs}.{wildcards.mode}.in_tfa ]; then ln -s ../input/{seqs}.in_tfa upgma/{seqs}.{wildcards.mode}.in_tfa; fi
+		echo "upgma-"{wildcards.mode} > output/{seqs}.{wildcards.mode}.upgma.dnd.date
+		date -Ins >> output/{seqs}.{wildcards.mode}.upgma.dnd.date
+		{frmw_upgma} -ALIGN -INFILE=upgma/{seqs}.{wildcards.mode}.in_tfa -SSFILE=ss/{seqs}.{wildcards.mode}.ss > output/{seqs}.{wildcards.mode}.upgma.dnd.out
+		date -Ins >> output/{seqs}.{wildcards.mode}.upgma.dnd.date
+		mv upgma/{seqs}.{wildcards.mode}.dnd dnd/{seqs}.{wildcards.mode}.upgma.dnd
+		"""
+
+rule upgmaproba:
+	input:
+		ssfiles="ss/{seqs}.proba.ss",
+		in_tfa=f"input/{seqs}.in_tfa"
+	output:
+		"dnd/{seqs}.proba.upgma.dnd"
+	priority: 2000
+	threads: lambda wildcards: (workflow.config["thr"]//2) - 1
+	shell:
+		"""
+		if [ ! -f upgma/{seqs}.proba.in_tfa ]; then ln -s ../input/{seqs}.in_tfa upgma/{seqs}.proba.in_tfa; fi
+		echo "upgma-proba" > output/{seqs}.proba.upgma.dnd.date
+		date -Ins >> output/{seqs}.proba.upgma.dnd.date
+		{frmw_upgma} -ALIGN -INFILE=upgma/{seqs}.proba.in_tfa -SSFILE=ss/{seqs}.proba.ss > output/{seqs}.proba.upgma.dnd.out
+		date -Ins >> output/{seqs}.proba.upgma.dnd.date
+		mv upgma/{seqs}.proba.dnd dnd/{seqs}.proba.upgma.dnd
+		"""
+
+rule nj:
+	input:
+		ssfiles="ss/{seqs}.{mode}.ss",
+		in_tfa=f"input/{seqs}.in_tfa"
+	output:
+		"dnd/{seqs}.{mode}.nj.dnd"
+	priority: 75
+	shell:
+		"""
+		if [ ! -f nj/{seqs}.{wildcards.mode}.in_tfa ]; then ln -s ../input/{seqs}.in_tfa nj/{seqs}.{wildcards.mode}.in_tfa; fi
+		echo "nj-"{wildcards.mode} > output/{seqs}.{wildcards.mode}.nj.dnd.date
+		date -Ins >> output/{seqs}.{wildcards.mode}.nj.dnd.date
+		{frmw_nj} -ALIGN -INFILE=nj/{seqs}.{wildcards.mode}.in_tfa -SSFILE=ss/{seqs}.{wildcards.mode}.ss > output/{seqs}.{wildcards.mode}.nj.dnd.out
+		date -Ins >> output/{seqs}.{wildcards.mode}.nj.dnd.date
+		mv nj/{seqs}.{wildcards.mode}.dnd dnd/{seqs}.{wildcards.mode}.nj.dnd
+		"""
+
+rule slmin:
+	input:
+		ssfiles="ss/{seqs}.{mode}.ss",
+		in_tfa=f"input/{seqs}.in_tfa"
+	output:
+		"dnd/{seqs}.{mode}.slmin.dnd"
+	priority: 75
+	shell:
+		"""
+		if [ ! -f slmin/{seqs}.{wildcards.mode}.in_tfa ]; then ln -s ../input/{seqs}.in_tfa slmin/{seqs}.{wildcards.mode}.in_tfa; fi
+		echo "slmin-"{wildcards.mode} > output/{seqs}.{wildcards.mode}.slmin.dnd.date
+		date -Ins >> output/{seqs}.{wildcards.mode}.slmin.dnd.date
+		{frmw_slmin} -ALIGN -INFILE=slmin/{seqs}.{wildcards.mode}.in_tfa -SSFILE=ss/{seqs}.{wildcards.mode}.ss > output/{seqs}.{wildcards.mode}.slmin.dnd.out
+		date -Ins >> output/{seqs}.{wildcards.mode}.slmin.dnd.date
+		mv slmin/{seqs}.{wildcards.mode}.dnd dnd/{seqs}.{wildcards.mode}.slmin.dnd
+		"""
+
+rule slminproba:
+	input:
+		ssfiles="ss/{seqs}.proba.ss",
+		in_tfa=f"input/{seqs}.in_tfa"
+	output:
+		"dnd/{seqs}.proba.slmin.dnd"
+	priority: 2000
+	threads: lambda wildcards: (workflow.config["thr"]//2) - 1
+	shell:
+		"""
+		if [ ! -f slmin/{seqs}.proba.in_tfa ]; then ln -s ../input/{seqs}.in_tfa slmin/{seqs}.proba.in_tfa; fi
+		echo "slmin-proba" > output/{seqs}.proba.slmin.dnd.date
+		date -Ins >> output/{seqs}.proba.slmin.dnd.date
+		{frmw_slmin} -ALIGN -INFILE=slmin/{seqs}.proba.in_tfa -SSFILE=ss/{seqs}.proba.ss > output/{seqs}.proba.slmin.dnd.out
+		date -Ins >> output/{seqs}.proba.slmin.dnd.date
+		mv slmin/{seqs}.proba.dnd dnd/{seqs}.proba.slmin.dnd
+		"""
+
+rule slmax:
+	input:
+		ssfiles="ss/{seqs}.{mode}.ss",
+		in_tfa=f"input/{seqs}.in_tfa"
+	output:
+		"dnd/{seqs}.{mode}.slmax.dnd"
+	priority: 75
+	shell:
+		"""
+		if [ ! -f slmax/{seqs}.{wildcards.mode}.in_tfa ]; then ln -s ../input/{seqs}.in_tfa slmax/{seqs}.{wildcards.mode}.in_tfa; fi
+		echo "slmax-"{wildcards.mode} > output/{seqs}.{wildcards.mode}.slmax.dnd.date
+		date -Ins >> output/{seqs}.{wildcards.mode}.slmax.dnd.date
+		{frmw_slmax} -ALIGN -INFILE=slmax/{seqs}.{wildcards.mode}.in_tfa -SSFILE=ss/{seqs}.{wildcards.mode}.ss > output/{seqs}.{wildcards.mode}.slmax.dnd.out
+		date -Ins >> output/{seqs}.{wildcards.mode}.slmax.dnd.date
+		mv slmax/{seqs}.{wildcards.mode}.dnd dnd/{seqs}.{wildcards.mode}.slmax.dnd
+		"""
+
+rule align:
+	input:
+		dnd="dnd/{seqs}.{mode}.{gts}.dnd",
+		ssfiles="ss/{seqs}.{mode}.ss",
+		in_tfa=f"input/{seqs}.in_tfa"
+	output:
+		"aln/{seqs}.{mode}.{gts}.msf"
+	params:
+		gtopt = lambda wildcards: wildcards.gts
+	priority: 5
+	shell:
+		"""
+		if [ ! -f aln/{seqs}.{wildcards.mode}.{wildcards.gts}.in_tfa ]; then ln -s ../input/{seqs}.in_tfa aln/{seqs}.{wildcards.mode}.{wildcards.gts}.in_tfa; fi
+		echo "align-"{wildcards.gts}"-"{wildcards.mode} > output/{seqs}.{wildcards.mode}.{wildcards.gts}.msf.date
+		date -Ins >> output/{seqs}.{wildcards.mode}.{wildcards.gts}.msf.date
+		{frmw_align} -ALIGN -CLUSTERING={params.gtopt} -INFILE=aln/{seqs}.{wildcards.mode}.{wildcards.gts}.in_tfa -SSFILE=ss/{seqs}.{wildcards.mode}.ss -USETREE=dnd/{seqs}.{wildcards.mode}.{wildcards.gts}.dnd -MAXDIV=0 -OUTPUT=GCG > output/{seqs}.{wildcards.mode}.{wildcards.gts}.msf.out
+		date -Ins >> output/{seqs}.{wildcards.mode}.{wildcards.gts}.msf.date
+		"""
+
+rule consistency:
+	input:
+		in_tfa=f"input/{seqs}.in_tfa"
+	output:
+		f"cons/{seqs}.cl",
+		f"ss/{seqs}.proba.ss"
+	threads: lambda wildcards: workflow.config["thr"]-1
+	priority: 2000
+	shell:
+		"""
+		if [ ! -f cons/{seqs}.in_tfa ]; then ln -s ../input/{seqs}.in_tfa cons/{seqs}.in_tfa; fi
+		echo "consistency" > output/{seqs}.cl.date
+		date -Ins >> output/{seqs}.cl.date
+		{frmw_conspar} -ALIGN -INFILE=cons/{seqs}.in_tfa -NTHR={thr}  > output/{seqs}.cl.out
+		date -Ins >> output/{seqs}.cl.date
+		mv cons/{seqs}.proba.ss ss
+		"""
+
+rule aligncons:
+	input:
+		dnd="dnd/{seqs}.{modeslow}.{gts}.dnd",
+		ssfiles="ss/{seqs}.{modeslow}.ss",
+		cl=f"cons/{seqs}.cl",
+		in_tfa=f"input/{seqs}.in_tfa"
+	output:
+		"alncons/{seqs}.{modeslow}.{gts}.cons.msf"
+	params:
+		gtopt = lambda wildcards: wildcards.gts
+	priority: 75
+	shell:
+		"""
+		if [ ! -f alncons/{seqs}.{wildcards.modeslow}.{wildcards.gts}.cons.in_tfa ]; then ln -s ../input/{seqs}.in_tfa alncons/{seqs}.{wildcards.modeslow}.{wildcards.gts}.cons.in_tfa; fi
+		echo "aligncons-"{wildcards.gts}"-"{wildcards.modeslow} > output/{seqs}.{wildcards.modeslow}.{wildcards.gts}.cons.msf.date
+		date -Ins >> output/{seqs}.{wildcards.modeslow}.{wildcards.gts}.cons.msf.date
+		{frmw_aligncons} -ALIGN -CLUSTERING={params.gtopt} -INFILE=alncons/{seqs}.{wildcards.modeslow}.{wildcards.gts}.cons.in_tfa -SSFILE=ss/{seqs}.{wildcards.modeslow}.ss -USETREE=dnd/{seqs}.{wildcards.modeslow}.{wildcards.gts}.dnd -CLFILE=cons/{seqs}.cl -MAXDIV=0 -OUTPUT=GCG > output/{seqs}.{wildcards.modeslow}.{wildcards.gts}.cons.msf.out
+		date -Ins >> output/{seqs}.{wildcards.modeslow}.{wildcards.gts}.cons.msf.date
+		"""
+
+def get_hi_dnd(wildcards):
+	return [f"dnd/{wildcards.seqs}.proba.upgma.dnd", f"dnd/{wildcards.seqs}.proba.slmin.dnd"]
+
+#rule alignconshi:
+#	input:
+#		dnd=get_hi_dnd,
+#		dnd="dnd/{seqs}.proba.{gtshi}.dnd",
+#		ssfiles="ss/{seqs}.proba.ss",
+#		cl=f"cons/{seqs}.cl",
+#		in_tfa=f"input/{seqs}.in_tfa"
+#	output:
+#		"alncons/{seqs}.proba.{gtshi}.cons.msf"
+#	params:
+#		gtopt = lambda wildcards: wildcards.gtshi
+#	shell:
+#		"""
+#		if [ ! -f alncons/{seqs}.proba.{wildcards.gtshi}.cons.in_tfa ]; then ln -s ../input/{seqs}.in_tfa alncons/{seqs}.proba.{wildcards.gtshi}.cons.in_tfa; fi
+#		{frmw_aligncons} -ALIGN -CLUSTERING={params.gtopt} -INFILE=alncons/{seqs}.proba.{wildcards.gtshi}.cons.in_tfa -SSFILE=ss/{seqs}.proba.ss -USETREE=dnd/{seqs}.proba.{wildcards.gtshi}.dnd -CLFILE=cons/{seqs}.cl -MAXDIV=0 -OUTPUT=GCG > output/{seqs}.proba.{wildcards.gtshi}.cons.msf.out
+#		"""
+
+rule alignconsupgma:
+	input:
+#		dnd=get_hi_dnd,
+		dnd="dnd/{seqs}.proba.upgma.dnd",
+		ssfiles="ss/{seqs}.proba.ss",
+		cl=f"cons/{seqs}.cl",
+		in_tfa=f"input/{seqs}.in_tfa"
+	output:
+		"alncons/{seqs}.proba.upgma.cons.msf"
+	priority: 2000
+	threads: lambda wildcards: (workflow.config["thr"]//2) - 1
+#	params:
+#		gtopt = lambda wildcards: wildcards.gtshi
+	shell:
+		"""
+		if [ ! -f alncons/{seqs}.proba.upgma.cons.in_tfa ]; then ln -s ../input/{seqs}.in_tfa alncons/{seqs}.proba.upgma.cons.in_tfa; fi
+		echo "aligncons-upgma-proba" > output/{seqs}.proba.upgma.cons.msf.date
+		date -Ins >> output/{seqs}.proba.upgma.cons.msf.date
+		{frmw_alignconspar} -ALIGN -CLUSTERING=UPGMA -INFILE=alncons/{seqs}.proba.upgma.cons.in_tfa -SSFILE=ss/{seqs}.proba.ss -USETREE=dnd/{seqs}.proba.upgma.dnd -CLFILE=cons/{seqs}.cl -MAXDIV=0 -OUTPUT=GCG -NTHR={thr2} > output/{seqs}.proba.upgma.cons.msf.out
+		date -Ins >> output/{seqs}.proba.upgma.cons.msf.date
+		"""
+
+rule alignconsslmin:
+	input:
+#		dnd=get_hi_dnd,
+		dnd="dnd/{seqs}.proba.slmin.dnd",
+		ssfiles="ss/{seqs}.proba.ss",
+		cl=f"cons/{seqs}.cl",
+		in_tfa=f"input/{seqs}.in_tfa"
+	output:
+		"alncons/{seqs}.proba.slmin.cons.msf"
+	priority: 2000
+	threads: lambda wildcards: (workflow.config["thr"]//2) - 1
+#	params:
+#		gtopt = lambda wildcards: wildcards.gtshi
+	shell:
+		"""
+		if [ ! -f alncons/{seqs}.proba.slmin.cons.in_tfa ]; then ln -s ../input/{seqs}.in_tfa alncons/{seqs}.proba.slmin.cons.in_tfa; fi
+		echo "aligncons-slmin-proba" > output/{seqs}.proba.slmin.cons.msf.date
+		date -Ins >> output/{seqs}.proba.slmin.cons.msf.date
+		{frmw_alignconspar} -ALIGN -CLUSTERING=SLMIN -INFILE=alncons/{seqs}.proba.slmin.cons.in_tfa -SSFILE=ss/{seqs}.proba.ss -USETREE=dnd/{seqs}.proba.slmin.dnd -CLFILE=cons/{seqs}.cl -MAXDIV=0 -OUTPUT=GCG -NTHR={thr2} > output/{seqs}.proba.slmin.cons.msf.out
+		date -Ins >> output/{seqs}.proba.slmin.cons.msf.date
+		"""
+

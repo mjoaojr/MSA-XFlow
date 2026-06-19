@@ -1,0 +1,926 @@
+host: bd
+Building DAG of jobs...
+Job stats:
+job            count
+-----------  -------
+consistency        1
+full               1
+kmers              1
+lcs                1
+quick              1
+nj                 5
+slmax              5
+slmin              5
+upgma              5
+align             20
+aligncons         16
+alignconshi        4
+all                1
+total             66
+
+
+[Sun May 24 16:56:24 2026]
+rule lcs:
+    input: input/pf00005-split_100-0-100.in_tfa
+    output: ss/pf00005-split_100-0-100.lcs.ss
+    jobid: 21
+    reason: Missing output files: ss/pf00005-split_100-0-100.lcs.ss
+    resources: tmpdir=/tmp
+Shell command: 
+		ln -s ../input/pf00005-split_100-0-100.in_tfa lcs/pf00005-split_100-0-100.in_tfa
+		~/MSA-XFlow/lcs/src/frmw_lcs -ALIGN -INFILE=lcs/pf00005-split_100-0-100.in_tfa > output/pf00005-split_100-0-100.lcs.ss.out
+		rm -f lcs/pf00005-split_100-0-100.aln
+		mv lcs/pf00005-split_100-0-100.lcs.ss ss
+		rm lcs/pf00005-split_100-0-100.in_tfa
+		
+
+[Sun May 24 16:56:24 2026]
+rule consistency:
+    input: input/pf00005-split_100-0-100.in_tfa
+    output: cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.proba.ss
+    jobid: 39
+    reason: Missing output files: cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.proba.ss
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f cons/pf00005-split_100-0-100.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa cons/pf00005-split_100-0-100.in_tfa; fi
+		~/MSA-XFlow/conspar/src/frmw_conspar -ALIGN -INFILE=cons/pf00005-split_100-0-100.in_tfa -NTHR=16  > output/pf00005-split_100-0-100.cl.out
+		mv cons/pf00005-split_100-0-100.proba.ss ss
+		
+
+[Sun May 24 16:56:24 2026]
+rule quick:
+    input: input/pf00005-split_100-0-100.in_tfa
+    output: ss/pf00005-split_100-0-100.quick.ss
+    jobid: 12
+    reason: Missing output files: ss/pf00005-split_100-0-100.quick.ss
+    resources: tmpdir=/tmp
+Shell command: 
+		ln -s ../input/pf00005-split_100-0-100.in_tfa quick/pf00005-split_100-0-100.in_tfa
+		~/MSA-XFlow/quick/src/frmw_quick -ALIGN -INFILE=quick/pf00005-split_100-0-100.in_tfa > output/pf00005-split_100-0-100.quick.ss.out
+		rm -f quick/pf00005-split_100-0-100.aln
+		mv quick/pf00005-split_100-0-100.quick.ss ss
+		rm quick/pf00005-split_100-0-100.in_tfa
+		
+
+[Sun May 24 16:56:24 2026]
+rule kmers:
+    input: input/pf00005-split_100-0-100.in_tfa
+    output: ss/pf00005-split_100-0-100.kmers.ss
+    jobid: 30
+    reason: Missing output files: ss/pf00005-split_100-0-100.kmers.ss
+    resources: tmpdir=/tmp
+Shell command: 
+		ln -s ../input/pf00005-split_100-0-100.in_tfa kmers/pf00005-split_100-0-100.in_tfa
+		~/MSA-XFlow/kmers/src/frmw_kmers -ALIGN -INFILE=kmers/pf00005-split_100-0-100.in_tfa > output/pf00005-split_100-0-100.kmers.ss.out
+		rm -f kmers/pf00005-split_100-0-100.aln
+		mv kmers/pf00005-split_100-0-100.kmers.ss ss
+		rm kmers/pf00005-split_100-0-100.in_tfa
+		
+
+[Sun May 24 16:56:24 2026]
+rule full:
+    input: input/pf00005-split_100-0-100.in_tfa
+    output: ss/pf00005-split_100-0-100.full.ss
+    jobid: 3
+    reason: Missing output files: ss/pf00005-split_100-0-100.full.ss
+    resources: tmpdir=/tmp
+Shell command: 
+		ln -s ../input/pf00005-split_100-0-100.in_tfa full/pf00005-split_100-0-100.in_tfa
+		~/MSA-XFlow/full/src/frmw_full -ALIGN -INFILE=full/pf00005-split_100-0-100.in_tfa > output/pf00005-split_100-0-100.full.ss.out
+		rm -f full/pf00005-split_100-0-100.aln
+		mv full/pf00005-split_100-0-100.full.ss ss
+		rm full/pf00005-split_100-0-100.in_tfa
+		
+
+[Sun May 24 16:56:24 2026]
+rule slmax:
+    input: ss/pf00005-split_100-0-100.kmers.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.kmers.slmax.dnd
+    jobid: 36
+    reason: Missing output files: dnd/pf00005-split_100-0-100.kmers.slmax.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.kmers.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=kmers
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f slmax/pf00005-split_100-0-100.kmers.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa slmax/pf00005-split_100-0-100.kmers.in_tfa; fi
+		~/MSA-XFlow/slmax/src/frmw_slmax -ALIGN -INFILE=slmax/pf00005-split_100-0-100.kmers.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss > output/pf00005-split_100-0-100.kmers.slmax.dnd.out
+		mv slmax/pf00005-split_100-0-100.kmers.dnd dnd/pf00005-split_100-0-100.kmers.slmax.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule slmax:
+    input: ss/pf00005-split_100-0-100.full.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.full.slmax.dnd
+    jobid: 9
+    reason: Missing output files: dnd/pf00005-split_100-0-100.full.slmax.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.full.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=full
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f slmax/pf00005-split_100-0-100.full.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa slmax/pf00005-split_100-0-100.full.in_tfa; fi
+		~/MSA-XFlow/slmax/src/frmw_slmax -ALIGN -INFILE=slmax/pf00005-split_100-0-100.full.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss > output/pf00005-split_100-0-100.full.slmax.dnd.out
+		mv slmax/pf00005-split_100-0-100.full.dnd dnd/pf00005-split_100-0-100.full.slmax.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule nj:
+    input: ss/pf00005-split_100-0-100.lcs.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.lcs.nj.dnd
+    jobid: 23
+    reason: Missing output files: dnd/pf00005-split_100-0-100.lcs.nj.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=lcs
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f nj/pf00005-split_100-0-100.lcs.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa nj/pf00005-split_100-0-100.lcs.in_tfa; fi
+		~/MSA-XFlow/nj/src/frmw_nj -ALIGN -INFILE=nj/pf00005-split_100-0-100.lcs.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss > output/pf00005-split_100-0-100.lcs.nj.dnd.out
+		mv nj/pf00005-split_100-0-100.lcs.dnd dnd/pf00005-split_100-0-100.lcs.nj.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule upgma:
+    input: ss/pf00005-split_100-0-100.proba.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.proba.upgma.dnd
+    jobid: 38
+    reason: Missing output files: dnd/pf00005-split_100-0-100.proba.upgma.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.proba.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=proba
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f upgma/pf00005-split_100-0-100.proba.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa upgma/pf00005-split_100-0-100.proba.in_tfa; fi
+		~/MSA-XFlow/upgma/src/frmw_upgma -ALIGN -INFILE=upgma/pf00005-split_100-0-100.proba.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss > output/pf00005-split_100-0-100.proba.upgma.dnd.out
+		mv upgma/pf00005-split_100-0-100.proba.dnd dnd/pf00005-split_100-0-100.proba.upgma.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule upgma:
+    input: ss/pf00005-split_100-0-100.quick.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.quick.upgma.dnd
+    jobid: 11
+    reason: Missing output files: dnd/pf00005-split_100-0-100.quick.upgma.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=quick
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f upgma/pf00005-split_100-0-100.quick.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa upgma/pf00005-split_100-0-100.quick.in_tfa; fi
+		~/MSA-XFlow/upgma/src/frmw_upgma -ALIGN -INFILE=upgma/pf00005-split_100-0-100.quick.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss > output/pf00005-split_100-0-100.quick.upgma.dnd.out
+		mv upgma/pf00005-split_100-0-100.quick.dnd dnd/pf00005-split_100-0-100.quick.upgma.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule slmin:
+    input: ss/pf00005-split_100-0-100.lcs.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.lcs.slmin.dnd
+    jobid: 25
+    reason: Missing output files: dnd/pf00005-split_100-0-100.lcs.slmin.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=lcs
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f slmin/pf00005-split_100-0-100.lcs.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa slmin/pf00005-split_100-0-100.lcs.in_tfa; fi
+		~/MSA-XFlow/slmin/src/frmw_slmin -ALIGN -INFILE=slmin/pf00005-split_100-0-100.lcs.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss > output/pf00005-split_100-0-100.lcs.slmin.dnd.out
+		mv slmin/pf00005-split_100-0-100.lcs.dnd dnd/pf00005-split_100-0-100.lcs.slmin.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule slmax:
+    input: ss/pf00005-split_100-0-100.lcs.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.lcs.slmax.dnd
+    jobid: 27
+    reason: Missing output files: dnd/pf00005-split_100-0-100.lcs.slmax.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=lcs
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f slmax/pf00005-split_100-0-100.lcs.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa slmax/pf00005-split_100-0-100.lcs.in_tfa; fi
+		~/MSA-XFlow/slmax/src/frmw_slmax -ALIGN -INFILE=slmax/pf00005-split_100-0-100.lcs.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss > output/pf00005-split_100-0-100.lcs.slmax.dnd.out
+		mv slmax/pf00005-split_100-0-100.lcs.dnd dnd/pf00005-split_100-0-100.lcs.slmax.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule nj:
+    input: ss/pf00005-split_100-0-100.proba.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.proba.nj.dnd
+    jobid: 41
+    reason: Missing output files: dnd/pf00005-split_100-0-100.proba.nj.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.proba.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=proba
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f nj/pf00005-split_100-0-100.proba.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa nj/pf00005-split_100-0-100.proba.in_tfa; fi
+		~/MSA-XFlow/nj/src/frmw_nj -ALIGN -INFILE=nj/pf00005-split_100-0-100.proba.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss > output/pf00005-split_100-0-100.proba.nj.dnd.out
+		mv nj/pf00005-split_100-0-100.proba.dnd dnd/pf00005-split_100-0-100.proba.nj.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule nj:
+    input: ss/pf00005-split_100-0-100.quick.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.quick.nj.dnd
+    jobid: 14
+    reason: Missing output files: dnd/pf00005-split_100-0-100.quick.nj.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=quick
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f nj/pf00005-split_100-0-100.quick.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa nj/pf00005-split_100-0-100.quick.in_tfa; fi
+		~/MSA-XFlow/nj/src/frmw_nj -ALIGN -INFILE=nj/pf00005-split_100-0-100.quick.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss > output/pf00005-split_100-0-100.quick.nj.dnd.out
+		mv nj/pf00005-split_100-0-100.quick.dnd dnd/pf00005-split_100-0-100.quick.nj.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule upgma:
+    input: ss/pf00005-split_100-0-100.kmers.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.kmers.upgma.dnd
+    jobid: 29
+    reason: Missing output files: dnd/pf00005-split_100-0-100.kmers.upgma.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.kmers.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=kmers
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f upgma/pf00005-split_100-0-100.kmers.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa upgma/pf00005-split_100-0-100.kmers.in_tfa; fi
+		~/MSA-XFlow/upgma/src/frmw_upgma -ALIGN -INFILE=upgma/pf00005-split_100-0-100.kmers.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss > output/pf00005-split_100-0-100.kmers.upgma.dnd.out
+		mv upgma/pf00005-split_100-0-100.kmers.dnd dnd/pf00005-split_100-0-100.kmers.upgma.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule upgma:
+    input: ss/pf00005-split_100-0-100.full.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.full.upgma.dnd
+    jobid: 2
+    reason: Missing output files: dnd/pf00005-split_100-0-100.full.upgma.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.full.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=full
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f upgma/pf00005-split_100-0-100.full.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa upgma/pf00005-split_100-0-100.full.in_tfa; fi
+		~/MSA-XFlow/upgma/src/frmw_upgma -ALIGN -INFILE=upgma/pf00005-split_100-0-100.full.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss > output/pf00005-split_100-0-100.full.upgma.dnd.out
+		mv upgma/pf00005-split_100-0-100.full.dnd dnd/pf00005-split_100-0-100.full.upgma.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule slmin:
+    input: ss/pf00005-split_100-0-100.proba.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.proba.slmin.dnd
+    jobid: 43
+    reason: Missing output files: dnd/pf00005-split_100-0-100.proba.slmin.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.proba.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=proba
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f slmin/pf00005-split_100-0-100.proba.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa slmin/pf00005-split_100-0-100.proba.in_tfa; fi
+		~/MSA-XFlow/slmin/src/frmw_slmin -ALIGN -INFILE=slmin/pf00005-split_100-0-100.proba.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss > output/pf00005-split_100-0-100.proba.slmin.dnd.out
+		mv slmin/pf00005-split_100-0-100.proba.dnd dnd/pf00005-split_100-0-100.proba.slmin.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule slmin:
+    input: ss/pf00005-split_100-0-100.quick.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.quick.slmin.dnd
+    jobid: 16
+    reason: Missing output files: dnd/pf00005-split_100-0-100.quick.slmin.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=quick
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f slmin/pf00005-split_100-0-100.quick.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa slmin/pf00005-split_100-0-100.quick.in_tfa; fi
+		~/MSA-XFlow/slmin/src/frmw_slmin -ALIGN -INFILE=slmin/pf00005-split_100-0-100.quick.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss > output/pf00005-split_100-0-100.quick.slmin.dnd.out
+		mv slmin/pf00005-split_100-0-100.quick.dnd dnd/pf00005-split_100-0-100.quick.slmin.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule slmax:
+    input: ss/pf00005-split_100-0-100.proba.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.proba.slmax.dnd
+    jobid: 45
+    reason: Missing output files: dnd/pf00005-split_100-0-100.proba.slmax.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.proba.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=proba
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f slmax/pf00005-split_100-0-100.proba.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa slmax/pf00005-split_100-0-100.proba.in_tfa; fi
+		~/MSA-XFlow/slmax/src/frmw_slmax -ALIGN -INFILE=slmax/pf00005-split_100-0-100.proba.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss > output/pf00005-split_100-0-100.proba.slmax.dnd.out
+		mv slmax/pf00005-split_100-0-100.proba.dnd dnd/pf00005-split_100-0-100.proba.slmax.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule slmax:
+    input: ss/pf00005-split_100-0-100.quick.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.quick.slmax.dnd
+    jobid: 18
+    reason: Missing output files: dnd/pf00005-split_100-0-100.quick.slmax.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=quick
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f slmax/pf00005-split_100-0-100.quick.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa slmax/pf00005-split_100-0-100.quick.in_tfa; fi
+		~/MSA-XFlow/slmax/src/frmw_slmax -ALIGN -INFILE=slmax/pf00005-split_100-0-100.quick.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss > output/pf00005-split_100-0-100.quick.slmax.dnd.out
+		mv slmax/pf00005-split_100-0-100.quick.dnd dnd/pf00005-split_100-0-100.quick.slmax.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule nj:
+    input: ss/pf00005-split_100-0-100.kmers.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.kmers.nj.dnd
+    jobid: 32
+    reason: Missing output files: dnd/pf00005-split_100-0-100.kmers.nj.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.kmers.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=kmers
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f nj/pf00005-split_100-0-100.kmers.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa nj/pf00005-split_100-0-100.kmers.in_tfa; fi
+		~/MSA-XFlow/nj/src/frmw_nj -ALIGN -INFILE=nj/pf00005-split_100-0-100.kmers.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss > output/pf00005-split_100-0-100.kmers.nj.dnd.out
+		mv nj/pf00005-split_100-0-100.kmers.dnd dnd/pf00005-split_100-0-100.kmers.nj.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule nj:
+    input: ss/pf00005-split_100-0-100.full.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.full.nj.dnd
+    jobid: 5
+    reason: Missing output files: dnd/pf00005-split_100-0-100.full.nj.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.full.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=full
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f nj/pf00005-split_100-0-100.full.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa nj/pf00005-split_100-0-100.full.in_tfa; fi
+		~/MSA-XFlow/nj/src/frmw_nj -ALIGN -INFILE=nj/pf00005-split_100-0-100.full.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss > output/pf00005-split_100-0-100.full.nj.dnd.out
+		mv nj/pf00005-split_100-0-100.full.dnd dnd/pf00005-split_100-0-100.full.nj.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule upgma:
+    input: ss/pf00005-split_100-0-100.lcs.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.lcs.upgma.dnd
+    jobid: 20
+    reason: Missing output files: dnd/pf00005-split_100-0-100.lcs.upgma.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=lcs
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f upgma/pf00005-split_100-0-100.lcs.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa upgma/pf00005-split_100-0-100.lcs.in_tfa; fi
+		~/MSA-XFlow/upgma/src/frmw_upgma -ALIGN -INFILE=upgma/pf00005-split_100-0-100.lcs.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss > output/pf00005-split_100-0-100.lcs.upgma.dnd.out
+		mv upgma/pf00005-split_100-0-100.lcs.dnd dnd/pf00005-split_100-0-100.lcs.upgma.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule slmin:
+    input: ss/pf00005-split_100-0-100.kmers.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.kmers.slmin.dnd
+    jobid: 34
+    reason: Missing output files: dnd/pf00005-split_100-0-100.kmers.slmin.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.kmers.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=kmers
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f slmin/pf00005-split_100-0-100.kmers.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa slmin/pf00005-split_100-0-100.kmers.in_tfa; fi
+		~/MSA-XFlow/slmin/src/frmw_slmin -ALIGN -INFILE=slmin/pf00005-split_100-0-100.kmers.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss > output/pf00005-split_100-0-100.kmers.slmin.dnd.out
+		mv slmin/pf00005-split_100-0-100.kmers.dnd dnd/pf00005-split_100-0-100.kmers.slmin.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule slmin:
+    input: ss/pf00005-split_100-0-100.full.ss, input/pf00005-split_100-0-100.in_tfa
+    output: dnd/pf00005-split_100-0-100.full.slmin.dnd
+    jobid: 7
+    reason: Missing output files: dnd/pf00005-split_100-0-100.full.slmin.dnd; Input files updated by another job: ss/pf00005-split_100-0-100.full.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=full
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f slmin/pf00005-split_100-0-100.full.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa slmin/pf00005-split_100-0-100.full.in_tfa; fi
+		~/MSA-XFlow/slmin/src/frmw_slmin -ALIGN -INFILE=slmin/pf00005-split_100-0-100.full.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss > output/pf00005-split_100-0-100.full.slmin.dnd.out
+		mv slmin/pf00005-split_100-0-100.full.dnd dnd/pf00005-split_100-0-100.full.slmin.dnd
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.lcs.upgma.dnd, ss/pf00005-split_100-0-100.lcs.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.lcs.upgma.msf
+    jobid: 19
+    reason: Missing output files: aln/pf00005-split_100-0-100.lcs.upgma.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.lcs.upgma.dnd, ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=lcs, gts=upgma
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.lcs.upgma.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.lcs.upgma.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=upgma -INFILE=aln/pf00005-split_100-0-100.lcs.upgma.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss -USETREE=dnd/pf00005-split_100-0-100.lcs.upgma.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.lcs.upgma.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.quick.nj.dnd, ss/pf00005-split_100-0-100.quick.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.quick.nj.cons.msf
+    jobid: 51
+    reason: Missing output files: alncons/pf00005-split_100-0-100.quick.nj.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.quick.nj.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=quick, gts=nj
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.quick.nj.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.quick.nj.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=nj -INFILE=alncons/pf00005-split_100-0-100.quick.nj.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss -USETREE=dnd/pf00005-split_100-0-100.quick.nj.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.quick.nj.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.full.nj.dnd, ss/pf00005-split_100-0-100.full.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.full.nj.msf
+    jobid: 4
+    reason: Missing output files: aln/pf00005-split_100-0-100.full.nj.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.full.nj.dnd, ss/pf00005-split_100-0-100.full.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=full, gts=nj
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.full.nj.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.full.nj.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=nj -INFILE=aln/pf00005-split_100-0-100.full.nj.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss -USETREE=dnd/pf00005-split_100-0-100.full.nj.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.full.nj.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.kmers.nj.dnd, ss/pf00005-split_100-0-100.kmers.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.kmers.nj.cons.msf
+    jobid: 59
+    reason: Missing output files: alncons/pf00005-split_100-0-100.kmers.nj.cons.msf; Input files updated by another job: cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.kmers.ss, dnd/pf00005-split_100-0-100.kmers.nj.dnd
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=kmers, gts=nj
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.kmers.nj.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.kmers.nj.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=nj -INFILE=alncons/pf00005-split_100-0-100.kmers.nj.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss -USETREE=dnd/pf00005-split_100-0-100.kmers.nj.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.kmers.nj.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.proba.slmin.dnd, ss/pf00005-split_100-0-100.proba.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.proba.slmin.msf
+    jobid: 42
+    reason: Missing output files: aln/pf00005-split_100-0-100.proba.slmin.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.proba.slmin.dnd, ss/pf00005-split_100-0-100.proba.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=proba, gts=slmin
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.proba.slmin.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.proba.slmin.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=slmin -INFILE=aln/pf00005-split_100-0-100.proba.slmin.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss -USETREE=dnd/pf00005-split_100-0-100.proba.slmin.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.proba.slmin.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.quick.slmax.dnd, ss/pf00005-split_100-0-100.quick.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.quick.slmax.msf
+    jobid: 17
+    reason: Missing output files: aln/pf00005-split_100-0-100.quick.slmax.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.quick.slmax.dnd, ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=quick, gts=slmax
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.quick.slmax.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.quick.slmax.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=slmax -INFILE=aln/pf00005-split_100-0-100.quick.slmax.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss -USETREE=dnd/pf00005-split_100-0-100.quick.slmax.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.quick.slmax.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule alignconshi:
+    input: dnd/pf00005-split_100-0-100.proba.upgma.dnd, dnd/pf00005-split_100-0-100.proba.slmin.dnd, ss/pf00005-split_100-0-100.proba.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.proba.slmin.cons.msf
+    jobid: 64
+    reason: Missing output files: alncons/pf00005-split_100-0-100.proba.slmin.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.proba.slmin.dnd, dnd/pf00005-split_100-0-100.proba.upgma.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.proba.ss
+    wildcards: seqs=pf00005-split_100-0-100, gtshi=slmin
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.proba.slmin.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.proba.slmin.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=slmin -INFILE=alncons/pf00005-split_100-0-100.proba.slmin.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss -USETREE=dnd/pf00005-split_100-0-100.proba.slmin.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.proba.slmin.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.quick.slmin.dnd, ss/pf00005-split_100-0-100.quick.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.quick.slmin.cons.msf
+    jobid: 52
+    reason: Missing output files: alncons/pf00005-split_100-0-100.quick.slmin.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.quick.slmin.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=quick, gts=slmin
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.quick.slmin.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.quick.slmin.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=slmin -INFILE=alncons/pf00005-split_100-0-100.quick.slmin.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss -USETREE=dnd/pf00005-split_100-0-100.quick.slmin.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.quick.slmin.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.kmers.upgma.dnd, ss/pf00005-split_100-0-100.kmers.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.kmers.upgma.msf
+    jobid: 28
+    reason: Missing output files: aln/pf00005-split_100-0-100.kmers.upgma.msf; Input files updated by another job: ss/pf00005-split_100-0-100.kmers.ss, dnd/pf00005-split_100-0-100.kmers.upgma.dnd
+    wildcards: seqs=pf00005-split_100-0-100, mode=kmers, gts=upgma
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.kmers.upgma.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.kmers.upgma.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=upgma -INFILE=aln/pf00005-split_100-0-100.kmers.upgma.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss -USETREE=dnd/pf00005-split_100-0-100.kmers.upgma.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.kmers.upgma.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.kmers.slmin.dnd, ss/pf00005-split_100-0-100.kmers.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.kmers.slmin.cons.msf
+    jobid: 60
+    reason: Missing output files: alncons/pf00005-split_100-0-100.kmers.slmin.cons.msf; Input files updated by another job: cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.kmers.ss, dnd/pf00005-split_100-0-100.kmers.slmin.dnd
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=kmers, gts=slmin
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.kmers.slmin.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.kmers.slmin.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=slmin -INFILE=alncons/pf00005-split_100-0-100.kmers.slmin.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss -USETREE=dnd/pf00005-split_100-0-100.kmers.slmin.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.kmers.slmin.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.proba.slmax.dnd, ss/pf00005-split_100-0-100.proba.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.proba.slmax.msf
+    jobid: 44
+    reason: Missing output files: aln/pf00005-split_100-0-100.proba.slmax.msf; Input files updated by another job: ss/pf00005-split_100-0-100.proba.ss, dnd/pf00005-split_100-0-100.proba.slmax.dnd
+    wildcards: seqs=pf00005-split_100-0-100, mode=proba, gts=slmax
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.proba.slmax.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.proba.slmax.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=slmax -INFILE=aln/pf00005-split_100-0-100.proba.slmax.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss -USETREE=dnd/pf00005-split_100-0-100.proba.slmax.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.proba.slmax.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.quick.slmin.dnd, ss/pf00005-split_100-0-100.quick.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.quick.slmin.msf
+    jobid: 15
+    reason: Missing output files: aln/pf00005-split_100-0-100.quick.slmin.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.quick.slmin.dnd, ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=quick, gts=slmin
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.quick.slmin.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.quick.slmin.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=slmin -INFILE=aln/pf00005-split_100-0-100.quick.slmin.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss -USETREE=dnd/pf00005-split_100-0-100.quick.slmin.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.quick.slmin.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.quick.slmax.dnd, ss/pf00005-split_100-0-100.quick.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.quick.slmax.cons.msf
+    jobid: 53
+    reason: Missing output files: alncons/pf00005-split_100-0-100.quick.slmax.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.quick.slmax.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=quick, gts=slmax
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.quick.slmax.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.quick.slmax.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=slmax -INFILE=alncons/pf00005-split_100-0-100.quick.slmax.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss -USETREE=dnd/pf00005-split_100-0-100.quick.slmax.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.quick.slmax.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.kmers.slmax.dnd, ss/pf00005-split_100-0-100.kmers.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.kmers.slmax.cons.msf
+    jobid: 61
+    reason: Missing output files: alncons/pf00005-split_100-0-100.kmers.slmax.cons.msf; Input files updated by another job: cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.kmers.ss, dnd/pf00005-split_100-0-100.kmers.slmax.dnd
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=kmers, gts=slmax
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.kmers.slmax.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.kmers.slmax.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=slmax -INFILE=alncons/pf00005-split_100-0-100.kmers.slmax.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss -USETREE=dnd/pf00005-split_100-0-100.kmers.slmax.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.kmers.slmax.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.full.upgma.dnd, ss/pf00005-split_100-0-100.full.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.full.upgma.cons.msf
+    jobid: 46
+    reason: Missing output files: alncons/pf00005-split_100-0-100.full.upgma.cons.msf; Input files updated by another job: cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.full.ss, dnd/pf00005-split_100-0-100.full.upgma.dnd
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=full, gts=upgma
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.full.upgma.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.full.upgma.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=upgma -INFILE=alncons/pf00005-split_100-0-100.full.upgma.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss -USETREE=dnd/pf00005-split_100-0-100.full.upgma.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.full.upgma.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.quick.nj.dnd, ss/pf00005-split_100-0-100.quick.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.quick.nj.msf
+    jobid: 13
+    reason: Missing output files: aln/pf00005-split_100-0-100.quick.nj.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.quick.nj.dnd, ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=quick, gts=nj
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.quick.nj.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.quick.nj.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=nj -INFILE=aln/pf00005-split_100-0-100.quick.nj.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss -USETREE=dnd/pf00005-split_100-0-100.quick.nj.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.quick.nj.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule alignconshi:
+    input: dnd/pf00005-split_100-0-100.proba.upgma.dnd, dnd/pf00005-split_100-0-100.proba.slmin.dnd, ss/pf00005-split_100-0-100.proba.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.proba.slmax.cons.msf
+    jobid: 65
+    reason: Missing output files: alncons/pf00005-split_100-0-100.proba.slmax.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.proba.slmin.dnd, dnd/pf00005-split_100-0-100.proba.upgma.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.proba.ss
+    wildcards: seqs=pf00005-split_100-0-100, gtshi=slmax
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.proba.slmax.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.proba.slmax.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=slmax -INFILE=alncons/pf00005-split_100-0-100.proba.slmax.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss -USETREE=dnd/pf00005-split_100-0-100.proba.slmax.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.proba.slmax.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.lcs.upgma.dnd, ss/pf00005-split_100-0-100.lcs.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.lcs.upgma.cons.msf
+    jobid: 54
+    reason: Missing output files: alncons/pf00005-split_100-0-100.lcs.upgma.cons.msf; Input files updated by another job: cons/pf00005-split_100-0-100.cl, dnd/pf00005-split_100-0-100.lcs.upgma.dnd, ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=lcs, gts=upgma
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.lcs.upgma.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.lcs.upgma.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=upgma -INFILE=alncons/pf00005-split_100-0-100.lcs.upgma.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss -USETREE=dnd/pf00005-split_100-0-100.lcs.upgma.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.lcs.upgma.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.kmers.nj.dnd, ss/pf00005-split_100-0-100.kmers.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.kmers.nj.msf
+    jobid: 31
+    reason: Missing output files: aln/pf00005-split_100-0-100.kmers.nj.msf; Input files updated by another job: ss/pf00005-split_100-0-100.kmers.ss, dnd/pf00005-split_100-0-100.kmers.nj.dnd
+    wildcards: seqs=pf00005-split_100-0-100, mode=kmers, gts=nj
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.kmers.nj.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.kmers.nj.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=nj -INFILE=aln/pf00005-split_100-0-100.kmers.nj.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss -USETREE=dnd/pf00005-split_100-0-100.kmers.nj.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.kmers.nj.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.full.nj.dnd, ss/pf00005-split_100-0-100.full.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.full.nj.cons.msf
+    jobid: 47
+    reason: Missing output files: alncons/pf00005-split_100-0-100.full.nj.cons.msf; Input files updated by another job: cons/pf00005-split_100-0-100.cl, dnd/pf00005-split_100-0-100.full.nj.dnd, ss/pf00005-split_100-0-100.full.ss
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=full, gts=nj
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.full.nj.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.full.nj.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=nj -INFILE=alncons/pf00005-split_100-0-100.full.nj.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss -USETREE=dnd/pf00005-split_100-0-100.full.nj.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.full.nj.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.quick.upgma.dnd, ss/pf00005-split_100-0-100.quick.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.quick.upgma.msf
+    jobid: 10
+    reason: Missing output files: aln/pf00005-split_100-0-100.quick.upgma.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.quick.upgma.dnd, ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=quick, gts=upgma
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.quick.upgma.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.quick.upgma.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=upgma -INFILE=aln/pf00005-split_100-0-100.quick.upgma.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss -USETREE=dnd/pf00005-split_100-0-100.quick.upgma.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.quick.upgma.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.lcs.nj.dnd, ss/pf00005-split_100-0-100.lcs.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.lcs.nj.cons.msf
+    jobid: 55
+    reason: Missing output files: alncons/pf00005-split_100-0-100.lcs.nj.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.lcs.nj.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=lcs, gts=nj
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.lcs.nj.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.lcs.nj.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=nj -INFILE=alncons/pf00005-split_100-0-100.lcs.nj.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss -USETREE=dnd/pf00005-split_100-0-100.lcs.nj.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.lcs.nj.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.lcs.slmax.dnd, ss/pf00005-split_100-0-100.lcs.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.lcs.slmax.msf
+    jobid: 26
+    reason: Missing output files: aln/pf00005-split_100-0-100.lcs.slmax.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.lcs.slmax.dnd, ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=lcs, gts=slmax
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.lcs.slmax.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.lcs.slmax.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=slmax -INFILE=aln/pf00005-split_100-0-100.lcs.slmax.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss -USETREE=dnd/pf00005-split_100-0-100.lcs.slmax.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.lcs.slmax.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule alignconshi:
+    input: dnd/pf00005-split_100-0-100.proba.upgma.dnd, dnd/pf00005-split_100-0-100.proba.slmin.dnd, ss/pf00005-split_100-0-100.proba.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.proba.upgma.cons.msf
+    jobid: 62
+    reason: Missing output files: alncons/pf00005-split_100-0-100.proba.upgma.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.proba.slmin.dnd, dnd/pf00005-split_100-0-100.proba.upgma.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.proba.ss
+    wildcards: seqs=pf00005-split_100-0-100, gtshi=upgma
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.proba.upgma.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.proba.upgma.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=upgma -INFILE=alncons/pf00005-split_100-0-100.proba.upgma.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss -USETREE=dnd/pf00005-split_100-0-100.proba.upgma.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.proba.upgma.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.full.slmin.dnd, ss/pf00005-split_100-0-100.full.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.full.slmin.cons.msf
+    jobid: 48
+    reason: Missing output files: alncons/pf00005-split_100-0-100.full.slmin.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.full.slmin.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.full.ss
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=full, gts=slmin
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.full.slmin.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.full.slmin.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=slmin -INFILE=alncons/pf00005-split_100-0-100.full.slmin.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss -USETREE=dnd/pf00005-split_100-0-100.full.slmin.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.full.slmin.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.full.slmin.dnd, ss/pf00005-split_100-0-100.full.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.full.slmin.msf
+    jobid: 6
+    reason: Missing output files: aln/pf00005-split_100-0-100.full.slmin.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.full.slmin.dnd, ss/pf00005-split_100-0-100.full.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=full, gts=slmin
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.full.slmin.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.full.slmin.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=slmin -INFILE=aln/pf00005-split_100-0-100.full.slmin.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss -USETREE=dnd/pf00005-split_100-0-100.full.slmin.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.full.slmin.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.lcs.slmin.dnd, ss/pf00005-split_100-0-100.lcs.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.lcs.slmin.cons.msf
+    jobid: 56
+    reason: Missing output files: alncons/pf00005-split_100-0-100.lcs.slmin.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.lcs.slmin.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=lcs, gts=slmin
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.lcs.slmin.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.lcs.slmin.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=slmin -INFILE=alncons/pf00005-split_100-0-100.lcs.slmin.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss -USETREE=dnd/pf00005-split_100-0-100.lcs.slmin.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.lcs.slmin.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.full.upgma.dnd, ss/pf00005-split_100-0-100.full.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.full.upgma.msf
+    jobid: 1
+    reason: Missing output files: aln/pf00005-split_100-0-100.full.upgma.msf; Input files updated by another job: ss/pf00005-split_100-0-100.full.ss, dnd/pf00005-split_100-0-100.full.upgma.dnd
+    wildcards: seqs=pf00005-split_100-0-100, mode=full, gts=upgma
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.full.upgma.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.full.upgma.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=upgma -INFILE=aln/pf00005-split_100-0-100.full.upgma.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss -USETREE=dnd/pf00005-split_100-0-100.full.upgma.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.full.upgma.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.lcs.slmin.dnd, ss/pf00005-split_100-0-100.lcs.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.lcs.slmin.msf
+    jobid: 24
+    reason: Missing output files: aln/pf00005-split_100-0-100.lcs.slmin.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.lcs.slmin.dnd, ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=lcs, gts=slmin
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.lcs.slmin.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.lcs.slmin.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=slmin -INFILE=aln/pf00005-split_100-0-100.lcs.slmin.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss -USETREE=dnd/pf00005-split_100-0-100.lcs.slmin.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.lcs.slmin.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.kmers.slmax.dnd, ss/pf00005-split_100-0-100.kmers.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.kmers.slmax.msf
+    jobid: 35
+    reason: Missing output files: aln/pf00005-split_100-0-100.kmers.slmax.msf; Input files updated by another job: ss/pf00005-split_100-0-100.kmers.ss, dnd/pf00005-split_100-0-100.kmers.slmax.dnd
+    wildcards: seqs=pf00005-split_100-0-100, mode=kmers, gts=slmax
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.kmers.slmax.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.kmers.slmax.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=slmax -INFILE=aln/pf00005-split_100-0-100.kmers.slmax.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss -USETREE=dnd/pf00005-split_100-0-100.kmers.slmax.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.kmers.slmax.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.full.slmax.dnd, ss/pf00005-split_100-0-100.full.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.full.slmax.cons.msf
+    jobid: 49
+    reason: Missing output files: alncons/pf00005-split_100-0-100.full.slmax.cons.msf; Input files updated by another job: cons/pf00005-split_100-0-100.cl, dnd/pf00005-split_100-0-100.full.slmax.dnd, ss/pf00005-split_100-0-100.full.ss
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=full, gts=slmax
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.full.slmax.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.full.slmax.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=slmax -INFILE=alncons/pf00005-split_100-0-100.full.slmax.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss -USETREE=dnd/pf00005-split_100-0-100.full.slmax.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.full.slmax.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.full.slmax.dnd, ss/pf00005-split_100-0-100.full.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.full.slmax.msf
+    jobid: 8
+    reason: Missing output files: aln/pf00005-split_100-0-100.full.slmax.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.full.slmax.dnd, ss/pf00005-split_100-0-100.full.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=full, gts=slmax
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.full.slmax.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.full.slmax.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=slmax -INFILE=aln/pf00005-split_100-0-100.full.slmax.in_tfa -SSFILE=ss/pf00005-split_100-0-100.full.ss -USETREE=dnd/pf00005-split_100-0-100.full.slmax.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.full.slmax.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.kmers.slmin.dnd, ss/pf00005-split_100-0-100.kmers.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.kmers.slmin.msf
+    jobid: 33
+    reason: Missing output files: aln/pf00005-split_100-0-100.kmers.slmin.msf; Input files updated by another job: ss/pf00005-split_100-0-100.kmers.ss, dnd/pf00005-split_100-0-100.kmers.slmin.dnd
+    wildcards: seqs=pf00005-split_100-0-100, mode=kmers, gts=slmin
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.kmers.slmin.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.kmers.slmin.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=slmin -INFILE=aln/pf00005-split_100-0-100.kmers.slmin.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss -USETREE=dnd/pf00005-split_100-0-100.kmers.slmin.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.kmers.slmin.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.lcs.slmax.dnd, ss/pf00005-split_100-0-100.lcs.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.lcs.slmax.cons.msf
+    jobid: 57
+    reason: Missing output files: alncons/pf00005-split_100-0-100.lcs.slmax.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.lcs.slmax.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=lcs, gts=slmax
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.lcs.slmax.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.lcs.slmax.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=slmax -INFILE=alncons/pf00005-split_100-0-100.lcs.slmax.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss -USETREE=dnd/pf00005-split_100-0-100.lcs.slmax.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.lcs.slmax.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.proba.upgma.dnd, ss/pf00005-split_100-0-100.proba.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.proba.upgma.msf
+    jobid: 37
+    reason: Missing output files: aln/pf00005-split_100-0-100.proba.upgma.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.proba.upgma.dnd, ss/pf00005-split_100-0-100.proba.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=proba, gts=upgma
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.proba.upgma.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.proba.upgma.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=upgma -INFILE=aln/pf00005-split_100-0-100.proba.upgma.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss -USETREE=dnd/pf00005-split_100-0-100.proba.upgma.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.proba.upgma.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.lcs.nj.dnd, ss/pf00005-split_100-0-100.lcs.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.lcs.nj.msf
+    jobid: 22
+    reason: Missing output files: aln/pf00005-split_100-0-100.lcs.nj.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.lcs.nj.dnd, ss/pf00005-split_100-0-100.lcs.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=lcs, gts=nj
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.lcs.nj.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.lcs.nj.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=nj -INFILE=aln/pf00005-split_100-0-100.lcs.nj.in_tfa -SSFILE=ss/pf00005-split_100-0-100.lcs.ss -USETREE=dnd/pf00005-split_100-0-100.lcs.nj.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.lcs.nj.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule alignconshi:
+    input: dnd/pf00005-split_100-0-100.proba.upgma.dnd, dnd/pf00005-split_100-0-100.proba.slmin.dnd, ss/pf00005-split_100-0-100.proba.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.proba.nj.cons.msf
+    jobid: 63
+    reason: Missing output files: alncons/pf00005-split_100-0-100.proba.nj.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.proba.slmin.dnd, dnd/pf00005-split_100-0-100.proba.upgma.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.proba.ss
+    wildcards: seqs=pf00005-split_100-0-100, gtshi=nj
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.proba.nj.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.proba.nj.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=nj -INFILE=alncons/pf00005-split_100-0-100.proba.nj.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss -USETREE=dnd/pf00005-split_100-0-100.proba.nj.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.proba.nj.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.quick.upgma.dnd, ss/pf00005-split_100-0-100.quick.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.quick.upgma.cons.msf
+    jobid: 50
+    reason: Missing output files: alncons/pf00005-split_100-0-100.quick.upgma.cons.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.quick.upgma.dnd, cons/pf00005-split_100-0-100.cl, ss/pf00005-split_100-0-100.quick.ss
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=quick, gts=upgma
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.quick.upgma.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.quick.upgma.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=upgma -INFILE=alncons/pf00005-split_100-0-100.quick.upgma.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.quick.ss -USETREE=dnd/pf00005-split_100-0-100.quick.upgma.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.quick.upgma.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule aligncons:
+    input: dnd/pf00005-split_100-0-100.kmers.upgma.dnd, ss/pf00005-split_100-0-100.kmers.ss, cons/pf00005-split_100-0-100.cl, input/pf00005-split_100-0-100.in_tfa
+    output: alncons/pf00005-split_100-0-100.kmers.upgma.cons.msf
+    jobid: 58
+    reason: Missing output files: alncons/pf00005-split_100-0-100.kmers.upgma.cons.msf; Input files updated by another job: ss/pf00005-split_100-0-100.kmers.ss, dnd/pf00005-split_100-0-100.kmers.upgma.dnd, cons/pf00005-split_100-0-100.cl
+    wildcards: seqs=pf00005-split_100-0-100, modeslow=kmers, gts=upgma
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f alncons/pf00005-split_100-0-100.kmers.upgma.cons.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa alncons/pf00005-split_100-0-100.kmers.upgma.cons.in_tfa; fi
+		~/MSA-XFlow/aligncons/src/frmw_aligncons -ALIGN -CLUSTERING=upgma -INFILE=alncons/pf00005-split_100-0-100.kmers.upgma.cons.in_tfa -SSFILE=ss/pf00005-split_100-0-100.kmers.ss -USETREE=dnd/pf00005-split_100-0-100.kmers.upgma.dnd -CLFILE=cons/pf00005-split_100-0-100.cl -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.kmers.upgma.cons.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule align:
+    input: dnd/pf00005-split_100-0-100.proba.nj.dnd, ss/pf00005-split_100-0-100.proba.ss, input/pf00005-split_100-0-100.in_tfa
+    output: aln/pf00005-split_100-0-100.proba.nj.msf
+    jobid: 40
+    reason: Missing output files: aln/pf00005-split_100-0-100.proba.nj.msf; Input files updated by another job: dnd/pf00005-split_100-0-100.proba.nj.dnd, ss/pf00005-split_100-0-100.proba.ss
+    wildcards: seqs=pf00005-split_100-0-100, mode=proba, gts=nj
+    resources: tmpdir=/tmp
+Shell command: 
+		if [ ! -f aln/pf00005-split_100-0-100.proba.nj.in_tfa ]; then ln -s ../input/pf00005-split_100-0-100.in_tfa aln/pf00005-split_100-0-100.proba.nj.in_tfa; fi
+		~/MSA-XFlow/align/src/frmw_align -ALIGN -CLUSTERING=nj -INFILE=aln/pf00005-split_100-0-100.proba.nj.in_tfa -SSFILE=ss/pf00005-split_100-0-100.proba.ss -USETREE=dnd/pf00005-split_100-0-100.proba.nj.dnd -MAXDIV=0 -OUTPUT=GCG > output/pf00005-split_100-0-100.proba.nj.msf.out
+		
+
+[Sun May 24 16:56:24 2026]
+rule all:
+    input: aln/pf00005-split_100-0-100.full.upgma.msf, aln/pf00005-split_100-0-100.full.nj.msf, aln/pf00005-split_100-0-100.full.slmin.msf, aln/pf00005-split_100-0-100.full.slmax.msf, aln/pf00005-split_100-0-100.quick.upgma.msf, aln/pf00005-split_100-0-100.quick.nj.msf, aln/pf00005-split_100-0-100.quick.slmin.msf, aln/pf00005-split_100-0-100.quick.slmax.msf, aln/pf00005-split_100-0-100.lcs.upgma.msf, aln/pf00005-split_100-0-100.lcs.nj.msf, aln/pf00005-split_100-0-100.lcs.slmin.msf, aln/pf00005-split_100-0-100.lcs.slmax.msf, aln/pf00005-split_100-0-100.kmers.upgma.msf, aln/pf00005-split_100-0-100.kmers.nj.msf, aln/pf00005-split_100-0-100.kmers.slmin.msf, aln/pf00005-split_100-0-100.kmers.slmax.msf, aln/pf00005-split_100-0-100.proba.upgma.msf, aln/pf00005-split_100-0-100.proba.nj.msf, aln/pf00005-split_100-0-100.proba.slmin.msf, aln/pf00005-split_100-0-100.proba.slmax.msf, alncons/pf00005-split_100-0-100.full.upgma.cons.msf, alncons/pf00005-split_100-0-100.full.nj.cons.msf, alncons/pf00005-split_100-0-100.full.slmin.cons.msf, alncons/pf00005-split_100-0-100.full.slmax.cons.msf, alncons/pf00005-split_100-0-100.quick.upgma.cons.msf, alncons/pf00005-split_100-0-100.quick.nj.cons.msf, alncons/pf00005-split_100-0-100.quick.slmin.cons.msf, alncons/pf00005-split_100-0-100.quick.slmax.cons.msf, alncons/pf00005-split_100-0-100.lcs.upgma.cons.msf, alncons/pf00005-split_100-0-100.lcs.nj.cons.msf, alncons/pf00005-split_100-0-100.lcs.slmin.cons.msf, alncons/pf00005-split_100-0-100.lcs.slmax.cons.msf, alncons/pf00005-split_100-0-100.kmers.upgma.cons.msf, alncons/pf00005-split_100-0-100.kmers.nj.cons.msf, alncons/pf00005-split_100-0-100.kmers.slmin.cons.msf, alncons/pf00005-split_100-0-100.kmers.slmax.cons.msf, alncons/pf00005-split_100-0-100.proba.upgma.cons.msf, alncons/pf00005-split_100-0-100.proba.nj.cons.msf, alncons/pf00005-split_100-0-100.proba.slmin.cons.msf, alncons/pf00005-split_100-0-100.proba.slmax.cons.msf, alncons/pf00005-split_100-0-100.proba.upgma.cons.msf, alncons/pf00005-split_100-0-100.proba.slmin.cons.msf
+    jobid: 0
+    reason: Input files updated by another job: alncons/pf00005-split_100-0-100.lcs.nj.cons.msf, aln/pf00005-split_100-0-100.kmers.nj.msf, alncons/pf00005-split_100-0-100.kmers.slmax.cons.msf, alncons/pf00005-split_100-0-100.quick.upgma.cons.msf, aln/pf00005-split_100-0-100.kmers.slmax.msf, alncons/pf00005-split_100-0-100.full.slmin.cons.msf, alncons/pf00005-split_100-0-100.kmers.nj.cons.msf, alncons/pf00005-split_100-0-100.proba.nj.cons.msf, aln/pf00005-split_100-0-100.quick.slmin.msf, aln/pf00005-split_100-0-100.proba.nj.msf, alncons/pf00005-split_100-0-100.lcs.slmin.cons.msf, aln/pf00005-split_100-0-100.quick.upgma.msf, alncons/pf00005-split_100-0-100.proba.slmax.cons.msf, aln/pf00005-split_100-0-100.proba.upgma.msf, aln/pf00005-split_100-0-100.lcs.nj.msf, alncons/pf00005-split_100-0-100.lcs.slmax.cons.msf, alncons/pf00005-split_100-0-100.quick.slmin.cons.msf, aln/pf00005-split_100-0-100.full.nj.msf, aln/pf00005-split_100-0-100.lcs.slmax.msf, alncons/pf00005-split_100-0-100.full.slmax.cons.msf, aln/pf00005-split_100-0-100.kmers.slmin.msf, aln/pf00005-split_100-0-100.proba.slmin.msf, alncons/pf00005-split_100-0-100.quick.slmax.cons.msf, aln/pf00005-split_100-0-100.full.slmax.msf, aln/pf00005-split_100-0-100.lcs.slmin.msf, aln/pf00005-split_100-0-100.proba.slmax.msf, alncons/pf00005-split_100-0-100.lcs.upgma.cons.msf, aln/pf00005-split_100-0-100.quick.nj.msf, alncons/pf00005-split_100-0-100.kmers.upgma.cons.msf, alncons/pf00005-split_100-0-100.quick.nj.cons.msf, aln/pf00005-split_100-0-100.full.slmin.msf, aln/pf00005-split_100-0-100.lcs.upgma.msf, aln/pf00005-split_100-0-100.kmers.upgma.msf, alncons/pf00005-split_100-0-100.full.nj.cons.msf, alncons/pf00005-split_100-0-100.proba.upgma.cons.msf, alncons/pf00005-split_100-0-100.proba.slmin.cons.msf, aln/pf00005-split_100-0-100.full.upgma.msf, alncons/pf00005-split_100-0-100.full.upgma.cons.msf, aln/pf00005-split_100-0-100.quick.slmax.msf, alncons/pf00005-split_100-0-100.kmers.slmin.cons.msf
+    resources: tmpdir=/tmp
+Shell command: None
+Job stats:
+job            count
+-----------  -------
+consistency        1
+full               1
+kmers              1
+lcs                1
+quick              1
+nj                 5
+slmax              5
+slmin              5
+upgma              5
+align             20
+aligncons         16
+alignconshi        4
+all                1
+total             66
+
+Reasons:
+    (check individual jobs above for details)
+    input files updated by another job:
+        align, aligncons, alignconshi, all, nj, slmax, slmin, upgma
+    output files have to be generated:
+        align, aligncons, alignconshi, consistency, full, kmers, lcs, nj, quick, slmax, slmin, upgma
+This was a dry-run (flag -n). The order of jobs does not reflect the order of execution.

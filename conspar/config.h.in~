@@ -1,5 +1,14 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* Host OS */
+#undef OS_MAC
+
+/* Host OS */
+#undef OS_UNIX
+
+/* Host OS */
+#undef OS_WINDOWS
+
 /* Name of package */
 #undef PACKAGE
 
